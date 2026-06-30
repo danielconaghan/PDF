@@ -189,6 +189,8 @@ This is the complete `defaults.json` with every key annotated. Your document is 
     "legend":       true,       // Show legend when series have names
     "bar_width":    0.7,        // 0–1; total group width as fraction of slot
     "line_width":   2.0,        // Points
+    "show_points":  false,      // Show circle markers at each data point (line only)
+    "show_area":    false,      // Fill area below each line with a tint (line only)
     "dpi":          150,        // Render resolution
     "height_ratio": 0.55,       // Chart height = width × height_ratio
     "donut_ratio":  0.5,        // Inner hole radius as fraction of outer (donut only)

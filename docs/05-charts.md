@@ -94,6 +94,25 @@ One line per series, with subtle area fill below each line. Best for time-series
 
 The number of values in each series must equal the number of labels.
 
+Two optional style flags control decorations:
+
+```json
+{
+  "type":       "chart",
+  "chart_type": "line",
+  "style": {
+    "show_points": true,
+    "show_area":   true
+  },
+  "data": { ... }
+}
+```
+
+| Flag | Default | Effect |
+|---|---|---|
+| `show_points` | `false` | Show a filled circle marker at each data point. |
+| `show_area` | `false` | Fill the area below each line with a semi-transparent tint. |
+
 ---
 
 ## Pie chart
@@ -228,6 +247,8 @@ Set global defaults in `chart_style` (top-level) and override per-chart in the e
 | `legend` | `true` | Show a legend when series have non-empty names. No effect on pie or donut. |
 | `bar_width` | `0.7` | Total grouped bar width as a fraction of slot width (0–1). |
 | `line_width` | `2.0` | Line width in points for line charts. |
+| `show_points` | `false` | Show circle markers at each data point on line charts. |
+| `show_area` | `false` | Fill the area below each line with a semi-transparent tint. |
 | `dpi` | `150` | Render resolution. 150 is appropriate for print-quality PDFs. |
 | `height_ratio` | `0.55` | Chart height as a multiple of width. `1.0` = square. |
 | `donut_ratio` | `0.5` | Inner hole radius as a fraction of outer radius. Only used by `donut`. |

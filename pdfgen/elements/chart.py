@@ -112,6 +112,9 @@ def _draw_line(ax, data, style):
     x_pos = list(range(len(labels)))
     colors = style.get("colors", _DEFAULT_COLORS)
 
+    show_points = style.get("show_points", False)
+    show_area   = style.get("show_area",   False)
+
     for i, s in enumerate(series):
         color = colors[i % len(colors)]
         values = s.get("values", [])
@@ -119,13 +122,14 @@ def _draw_line(ax, data, style):
             x_pos, values,
             color=color,
             linewidth=style.get("line_width", 2.0),
-            marker="o",
+            marker="o" if show_points else "none",
             markersize=4,
             markeredgewidth=0,
             label=s.get("name", ""),
             zorder=3,
         )
-        ax.fill_between(x_pos, values, alpha=0.07, color=color)
+        if show_area:
+            ax.fill_between(x_pos, values, alpha=0.07, color=color)
 
     rot = _label_rotation(labels)
     ax.set_xticks(x_pos)
