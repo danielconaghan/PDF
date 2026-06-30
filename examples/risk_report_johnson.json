@@ -1,0 +1,559 @@
+{
+  "document": {
+    "title": "T Johnson - Full Risk Report",
+    "author": "Oxford Risk",
+    "subject": "Investment Risk Profile — Terence Johnson",
+    "keywords": ["risk profile", "suitable risk level", "Oxford Risk", "financial personality"]
+  },
+
+  "cover": {
+    "title": "FULL REPORT",
+    "subtitle": "Powered by Oxford Risk ©",
+    "logo": "../assets/DefaultLogo.png",
+    "background_color": "#ffffff",
+    "title_color": "#111111",
+    "subtitle_color": "#888888"
+  },
+
+  "header": {
+    "left": "Powered by Oxford Risk ©",
+    "separator": true
+  },
+
+  "footer": {
+    "separator": false
+  },
+
+  "styles": {
+    "h1": {
+      "font": "Helvetica",
+      "size": 22,
+      "color": "#111111",
+      "leading": 26,
+      "space_before": 18,
+      "space_after": 8
+    },
+    "h2": {
+      "font": "Helvetica",
+      "size": 15,
+      "color": "#111111",
+      "leading": 19,
+      "space_before": 16,
+      "space_after": 4
+    },
+    "h3": {
+      "font": "Helvetica",
+      "size": 12,
+      "color": "#111111",
+      "leading": 16,
+      "space_before": 12,
+      "space_after": 4
+    },
+    "body": {
+      "font": "Helvetica",
+      "size": 10,
+      "color": "#333333",
+      "leading": 15,
+      "space_before": 0,
+      "space_after": 8
+    },
+    "caption": {
+      "extends": "body",
+      "size": 8,
+      "color": "#888888"
+    },
+    "badge_blue": {
+      "font": "Helvetica-Bold",
+      "size": 10,
+      "color": "#1a56db",
+      "leading": 14,
+      "space_before": 6,
+      "space_after": 6
+    },
+    "badge_green": {
+      "font": "Helvetica-Bold",
+      "size": 10,
+      "color": "#057a55",
+      "leading": 14,
+      "space_before": 6,
+      "space_after": 6
+    },
+    "note": {
+      "extends": "body",
+      "font": "Helvetica",
+      "color": "#888888",
+      "size": 9
+    }
+  },
+
+  "table_style": {
+    "header_background": "#f0f4f8",
+    "header_color": "#111111",
+    "header_font": "Helvetica-Bold",
+    "header_align": "left",
+    "body_font": "Helvetica",
+    "body_color": "#333333",
+    "font_size": 10,
+    "cell_padding": 7,
+    "alternate_rows": true,
+    "alternate_color": "#f9fafb",
+    "grid_color": "#e2e8f0",
+    "grid_thickness": 0.5,
+    "space_before": 8,
+    "space_after": 16
+  },
+
+  "content": [
+
+    { "type": "heading", "level": 1, "text": "Client Details" },
+    {
+      "type": "table",
+      "column_widths": ["20%", "30%", "20%", "30%"],
+      "rows": [
+        ["<b>Profile Updated:</b>", "04.02.2026", "<b>Title:</b>", "Mr."],
+        ["<b>First Name:</b>", "Terence", "<b>Last Name:</b>", "Johnson"],
+        ["<b>Ref:</b>", "72c8e4c9-3295-4a7e-8f6e-ef48404c6136", "<b>Signature (optional):</b>", ""]
+      ]
+    },
+    { "type": "paragraph", "text": "<b>Status:</b>" },
+    { "type": "paragraph", "text": "Completed" },
+    { "type": "rule" },
+
+    { "type": "heading", "level": 1, "text": "Adviser Contact Details" },
+    {
+      "type": "table",
+      "column_widths": ["20%", "80%"],
+      "rows": [
+        ["<b>Name:</b>", "Josh Hewitt"]
+      ]
+    },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "About this report" },
+    { "type": "paragraph", "text": "This report is about you—how you think about money, how much investment risk you're comfortable with, and how your personal situation influences your financial decisions. It will help you:" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Understand what investment risk really means",
+        "See how your preferences and financial circumstances shape your risk profile",
+        "Review a sample investment projection and portfolio aligned to your risk level"
+      ]
+    },
+    { "type": "paragraph", "text": "This report acts as a guide to confirm the level of investment risk that suits you best. We may make adjustments based on further discussion to ensure it reflects your goals and preferences accurately." },
+    { "type": "heading", "level": 2, "text": "What is investment risk and why does it matter?" },
+    { "type": "paragraph", "text": "Investment risk refers to the chance that your investments might not perform as expected. This can mean your portfolio may go up or down in value, or that the returns you earn may be lower than hoped." },
+    { "type": "paragraph", "text": "All investments carry some degree of risk—even the more cautious ones. Generally:" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Higher-risk investments may offer greater long-term growth but come with more short-term ups and downs",
+        "Lower-risk investments may feel safer, but they might not keep pace with inflation or long-term financial goals"
+      ]
+    },
+    { "type": "paragraph", "text": "Understanding your comfort with risk helps us design an investment strategy that aligns with your financial goals and helps you stay committed during periods of market volatility." },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "How it works:" },
+    { "type": "paragraph", "text": "Your Suitable Risk Level is determined using a blend of key factors: your Risk Tolerance, your Risk Capacity, your Composure, and your Knowledge &amp; Experience. Together, these insights help us recommend a level of investment risk that's not only appropriate for your financial situation but also emotionally and practically sustainable—so you can invest with confidence and stay on track toward your goals." },
+    { "type": "paragraph", "text": "Your Suitable Risk Level is applicable to all your investible assets. We may choose to invest at a different risk level (our Agreed Risk Level) depending on your specific circumstances, for example if you are investing a portion of your assets for a specific purpose." },
+    { "type": "heading", "level": 2, "text": "Risk Tolerance" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Risk Tolerance is your long-term willingness to trade-off risk and return",
+        "It is the starting point for establishing the right level of risk to take with investible assets over the long-term"
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Risk Capacity" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Risk Capacity is your ability to take financial risk, given your circumstances and plans for the future",
+        "If you are highly reliant on your investible assets to fund your current and future lifestyle, your Risk Capacity will be low. If you can fund your short to mid-term spending from your income and/or from leveraging your non-investible assets, your Risk Capacity will be high."
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Composure" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Composure affects the Suitable Risk Level score by indicating how likely you are to remain calm and stick to your investment plan during market volatility, ensuring the recommended risk level aligns with your behavioural resilience."
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Knowledge and Experience" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Knowledge and Experience informs the Suitable Risk Level score by assessing how well you understand financial products and markets, helping to ensure that the level of investment risk recommended is appropriate for your familiarity and capability."
+      ]
+    },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Suitable Risk Level" },
+    { "type": "paragraph", "text": "The Suitable Risk Level represents the amount of investment risk you may consider taking. It is designed to align with your overall financial situation and psychological comfort. While this provides a helpful guide to what your Suitable Risk Level could be, it can be adjusted following further discussion to reflect your individual preferences and specific requirements." },
+    { "type": "paragraph", "text": "<b>Very Low — 1.34</b>", "style": "badge_blue" },
+    { "type": "paragraph", "text": "[Scale diagram — Very Low · Low · Medium Low · Medium · Medium High · High · Very High — not yet supported, requires a new element type]", "style": "note" },
+    { "type": "spacer", "height": 8 },
+    { "type": "paragraph", "text": "Based on your responses, your Suitable Risk Level is <b>very low</b>. This means:" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Your priority is for your overall investments to be secure and not lose capital.",
+        "Most standard investment portfolios would not be suitable for investors in this category, and additional checks should be performed before proceeding to invest your assets."
+      ]
+    },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Why this level of risk was chosen:" },
+    { "type": "paragraph", "text": "Your very low profile was determined by evaluating your responses across several key factors, with each one contributing to your overall Suitable Risk Level." },
+    { "type": "heading", "level": 2, "text": "Risk Tolerance" },
+    { "type": "paragraph", "text": "<b>Very Low</b>", "style": "badge_blue" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "You have very low Risk Tolerance, which means you tend to avoid taking financial risks.",
+        "People with very low Risk Tolerance are most comfortable when their total wealth is mostly protected against the possibility of poor long-term outcomes, even if that means foregoing returns."
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Risk Capacity" },
+    { "type": "paragraph", "text": "<b>Moderately High</b>", "style": "badge_blue" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Your Risk Capacity is moderately high, indicating that your future income and/or non-investable wealth, if necessary, is sufficient to fund your future expenditure.",
+        "Your Risk Capacity doesn't impact your Suitable Risk Level, because your Risk Capacity aligns with your Risk Tolerance."
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Composure" },
+    { "type": "paragraph", "text": "<b>Medium</b>", "style": "badge_blue" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Your Composure is medium, meaning that you may occasionally feel unsettled by market shifts but generally make thoughtful decisions.",
+        "Your Suitable Risk Level has not been changed as your Composure score is still within the range for this risk level."
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Knowledge and Experience" },
+    { "type": "paragraph", "text": "<b>Good</b>", "style": "badge_green" },
+    {
+      "type": "list",
+      "style": "bullet",
+      "items": [
+        "Your Knowledge and Experience is high, meaning that you are well-versed in financial concepts and investment strategies, enabling confident and informed decision-making across market conditions.",
+        "Your Suitable Risk Level has not been changed as your Knowledge and Experience score is still within the range for this risk level."
+      ]
+    },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Agreed Risk Level" },
+    { "type": "paragraph", "text": "The Agreed Risk Level reflects the final investment risk level selected by your adviser, based on your personal circumstances and preferences, indicating how much risk your investible assets should be exposed to overall." },
+    { "type": "paragraph", "text": "<b>Medium</b>", "style": "badge_blue" },
+    { "type": "paragraph", "text": "[Scale diagram — Very Low · Low · Medium Low · <b>Medium</b> · Medium High · High · Very High — not yet supported]", "style": "note" },
+    { "type": "spacer", "height": 8 },
+    { "type": "heading", "level": 2, "text": "What does this mean for you?" },
+    { "type": "paragraph", "text": "Your portfolio will be designed to pursue long-term growth, incorporating investments that may experience short-term volatility. While there is a risk of loss, the overall strategy will aim to manage and minimise the likelihood of substantial long-term capital erosion." },
+    { "type": "heading", "level": 2, "text": "Example Portfolio" },
+    { "type": "paragraph", "text": "This chart presents an illustrative asset allocation as an example of a medium investment, showing how investments might be distributed across asset classes such as equities, bonds, and cash equivalents." },
+    {
+      "type": "chart",
+      "chart_type": "pie",
+      "width": "60%",
+      "align": "left",
+      "style": {
+        "height_ratio": 0.9,
+        "colors": ["#a8d5f5", "#2c6fad", "#4a9fd6", "#0b3d7a", "#6db8e8"],
+        "legend": true
+      },
+      "data": {
+        "labels": ["Cash", "Government Bond", "Corporate Bond", "Developed Market Equity", "Emerging Market Equity"],
+        "series": [
+          { "values": [5, 20, 15, 50, 10] }
+        ]
+      }
+    },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Example Portfolio Projection" },
+    { "type": "paragraph", "text": "This projection example is based on investing £100K in your Agreed Risk Level for 10 years. This is an example only, based on projection of future performance and should not be taken as a guarantee of future returns." },
+    {
+      "type": "chart",
+      "chart_type": "line",
+      "style": {
+        "height_ratio": 0.55,
+        "colors": ["#0b3d7a", "#6e3f8e", "#c0392b", "#888888"],
+        "grid": true,
+        "grid_color": "#e0e0e0",
+        "line_width": 2.0,
+        "legend": true
+      },
+      "data": {
+        "labels": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        "series": [
+          { "name": "Good Outcome",    "values": [100000, 113000, 128000, 143000, 160000, 178000, 198000, 218000, 238000, 250000, 261000] },
+          { "name": "Average Outcome", "values": [100000, 106000, 111000, 117000, 124000, 130000, 136000, 143000, 147000, 151000, 155000] },
+          { "name": "Poor Outcome",    "values": [100000,  98000,  97000,  96000,  95000,  94000,  93000,  92500,  92000,  92000,  92000] },
+          { "name": "Not Invested",    "values": [100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000] }
+        ]
+      }
+    },
+    { "type": "paragraph", "text": "Investing £100K at medium risk means that after 10 years you can expect the following possible range of outcomes:" },
+    {
+      "type": "table",
+      "column_widths": ["35%", "65%"],
+      "rows": [
+        ["<b>Average Performance:</b>", "<b>£155K (+54.9% returns)</b>"],
+        ["Projected average over 10 years at this risk level.", ""],
+        ["<b>Good Outcome:</b>", "<b>£261K (+160.7% returns)</b>"],
+        ["Likely range of returns if you invest for 10 years. 95% of outcomes are less than this.", ""],
+        ["<b>Poor Outcome:</b>", "<b>£92K (-7.9% returns)</b>"],
+        ["Investments can go down as well as up. 95% of outcomes are greater than this.", ""]
+      ]
+    },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Your Financial Personality" },
+    { "type": "paragraph", "text": "Your Financial Personality influences how you approach investment decisions, and how you will feel over the investment journey. Your results form a solid foundation for the right level of risk to take with your investments." },
+    { "type": "heading", "level": 2, "text": "Risk Tolerance" },
+    { "type": "paragraph", "text": "A stable personality trait, reflecting an investor's reasoned willingness to accept the possibility of lower long-term returns for a greater chance of better long-term returns." },
+    { "type": "paragraph", "text": "[Scale diagram — Very Low (selected) · Low · Medium Low · Medium · Medium High · High · Very High]", "style": "note" },
+    { "type": "paragraph", "text": "You have very low Risk Tolerance, which means you tend to be highly conservative with money, and prefer security over the possibility of growth. Most standard investment products would not be suitable for investors with very low Risk Tolerance, and additional checks and confirmation should be performed before proceeding." },
+    { "type": "heading", "level": 2, "text": "Composure" },
+    { "type": "paragraph", "text": "Tendency to remain composed through the ups and downs of the investment journey." },
+    { "type": "paragraph", "text": "[Scale diagram — Low · Medium (selected) · High]", "style": "note" },
+    { "type": "paragraph", "text": "You have medium Composure, which means you can occasionally worry about the temporary ups and downs of the market, though this may only be a problem when things become particularly stressed." },
+    { "type": "heading", "level": 2, "text": "Confidence" },
+    { "type": "paragraph", "text": "Confidence and comfort making financial decisions." },
+    { "type": "paragraph", "text": "[Scale diagram — Low (selected) · Medium · High]", "style": "note" },
+    { "type": "paragraph", "text": "You have low Confidence, which means you may have limited experience with investing, be relatively unaware of current market conditions, and might require more guidance or background information when considering your options." },
+    { "type": "heading", "level": 2, "text": "Impulsivity" },
+    { "type": "paragraph", "text": "Tendency to make decisions emotionally and on the spur of the moment." },
+    { "type": "paragraph", "text": "[Scale diagram — Low (selected) · Medium · High]", "style": "note" },
+    { "type": "paragraph", "text": "You have low Impulsivity, which means you tend to be more measured and methodical when approaching financial decisions, deliberating over possible outcomes before proceeding." },
+    { "type": "heading", "level": 2, "text": "Familiarity Preferences" },
+    { "type": "paragraph", "text": "Preference for investment solutions that feel familiar and have a strong story." },
+    { "type": "paragraph", "text": "[Scale diagram — Low (selected) · Medium · High]", "style": "note" },
+    { "type": "paragraph", "text": "You have low Familiarity Preference, which means you tend to be comfortable with unusual or novel investments, and do not need a strong narrative to be comfortable with an investment." },
+    { "type": "heading", "level": 2, "text": "Consistency" },
+    { "type": "paragraph", "text": "The Consistency index measures how similar the Risk Tolerance answers were to one another, and can therefore reveal potential misunderstandings or unusual interpretations of the questionnaire. On a red, amber, green scale you scored:" },
+    {
+      "type": "table",
+      "column_widths": ["20%", "80%"],
+      "style": { "header_background": "#ffffff", "alternate_rows": false },
+      "rows": [
+        ["<b>GREEN</b>", "The questions were answered in a consistent way."]
+      ]
+    },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Knowledge and Experience" },
+    { "type": "paragraph", "text": "Your knowledge and experience score reflects your history with investing and your understanding of the core principles of finance. Knowledge and experience are important factors in determining the right level of risk to take with your investments." },
+    { "type": "paragraph", "text": "[Scale diagram — Low · Moderate · Good (selected)]", "style": "note" },
+    { "type": "paragraph", "text": "You are likely to have considerable knowledge and experience of investing, and should therefore invest at the suitable risk level. Despite this, please be mindful of the need to explore and understand the investment recommendations presented." },
+    { "type": "heading", "level": 2, "text": "Investment History" },
+    { "type": "paragraph", "text": "[Scale diagram — Low · Medium · High (selected)]", "style": "note" },
+    { "type": "paragraph", "text": "Your investment history score is high, which suggests you have ample experience with investing. Discussing your prior experiences may help identify your specific requirements and preferences." },
+    { "type": "heading", "level": 2, "text": "Investment Knowledge" },
+    { "type": "paragraph", "text": "[Scale diagram — Low (selected) · Medium · High]", "style": "note" },
+    { "type": "paragraph", "text": "Your investment knowledge score is low, which suggests that you consider yourself to have relatively limited knowledge of investing, or that you have few sources of investment expertise. Take care to understand and get comfortable with your investment recommendations." },
+    { "type": "heading", "level": 2, "text": "Investment Principles" },
+    { "type": "paragraph", "text": "[Scale diagram — Low · Medium (selected) · High]", "style": "note" },
+    { "type": "paragraph", "text": "Your investment principles score is medium, which means that you may not be confident about some of the core investment principles. You may require further guidance and advice before investing." },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "About Investment Principles" },
+    { "type": "paragraph", "text": "It is important to understand the core concepts of investing, such as the relationship between risk and reward, and how investments tend to function and perform over time. Here is a summary of your answers and an explanation of each principle." },
+    { "type": "paragraph", "text": "<b>Diversifying your portfolio across many types of investments helps to reduce risk. You responded:</b>" },
+    {
+      "type": "table",
+      "column_widths": ["100%"],
+      "style": { "header_background": "#ffffff", "alternate_rows": false, "header_align": "center" },
+      "headers": ["AGREE."]
+    },
+    { "type": "paragraph", "text": "Explanation: In investing, as in life, it's always risky to put all your eggs in one basket. Constructing a portfolio of several different asset classes (such as equities, bonds, property, etc.) from several different countries reduces the risk that you make a big loss if any one asset performs badly." },
+    { "type": "paragraph", "text": "<b>Past performance is not always a good indicator of future returns. You responded:</b>" },
+    {
+      "type": "table",
+      "column_widths": ["100%"],
+      "style": { "header_background": "#ffffff", "alternate_rows": false, "header_align": "center" },
+      "headers": ["AGREE."]
+    },
+    { "type": "paragraph", "text": "Explanation: No one knows what the future will bring, and investing always carries some degree of uncertainty. The way a particular asset or investment strategy has fared in the past can't tell you much about what will happen in the future." },
+    { "type": "paragraph", "text": "<b>Investments may go down as well as up. You responded:</b>" },
+    {
+      "type": "table",
+      "column_widths": ["100%"],
+      "style": { "header_background": "#ffffff", "alternate_rows": false, "header_align": "center" },
+      "headers": ["STRONGLY AGREE."]
+    },
+    { "type": "paragraph", "text": "Explanation: Although everyone invests money in the hope that it will grow over time, there is always a risk that the value of your investment will drop. Investment returns and investment risk go hand in hand: to increase the chance of higher growth, you have to accept a higher chance of the money not being there when you need it." },
+    { "type": "paragraph", "text": "<b>Good investing requires committing money for the medium to long term. You responded:</b>" },
+    {
+      "type": "table",
+      "column_widths": ["100%"],
+      "style": { "header_background": "#ffffff", "alternate_rows": false, "header_align": "center" },
+      "headers": ["AGREE."]
+    },
+    { "type": "paragraph", "text": "Explanation: Investors who adopt a long-term view tend to do better than investors who focus on the short term: not because the investments they own are necessarily different, but because they behave differently. Good investing means making a plan and sticking to it, buying and selling infrequently, and putting money to work as early as possible." },
+    { "type": "paragraph", "text": "<b>A portfolio that has a large proportion of stocks and shares may lose a significant amount of its value. You responded:</b>" },
+    {
+      "type": "table",
+      "column_widths": ["100%"],
+      "style": { "header_background": "#ffffff", "alternate_rows": false, "header_align": "center" },
+      "headers": ["NEUTRAL."]
+    },
+    { "type": "paragraph", "text": "Explanation: Some investments are riskier than others: in particular, stocks and shares tend to have higher risk than bonds or cash. This doesn't mean that other investments can't be the worst performers in any specific time period, but in general the higher the proportion of stocks and shares in your portfolio, the more you need to be prepared for periods of significant loss... though this can also mean higher returns over time if you stick with them." },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Risk Capacity" },
+    { "type": "paragraph", "text": "Risk Capacity evaluates your financial ability to absorb potential losses without compromising your financial goals. It considers factors such as current assets, liabilities, future income, and anticipated expenses to help determine how much risk your finances can realistically support. It's different from your Risk Tolerance, which is about your comfort with risk." },
+    { "type": "paragraph", "text": "[Scale diagram — Very Low · Low · Moderately Low · Neutral · Moderately High (selected) · High]", "style": "note" },
+    { "type": "paragraph", "text": "You have moderately high Risk Capacity, which means you can take increased investment risk for the chance to grow your wealth over time." },
+    { "type": "heading", "level": 2, "text": "Factors that impact your Risk Capacity" },
+    { "type": "heading", "level": 3, "text": "Assets versus Liabilities" },
+    { "type": "paragraph", "text": "[Scale diagram — Negative · Neutral · Positive (selected)]", "style": "note" },
+    { "type": "paragraph", "text": "As it stands today, the value of your non-investible assets is greater than your debts. This increases your capacity to take risk with your investments, provided you can sell or borrow against your non-investible assets if necessary." },
+    { "type": "heading", "level": 3, "text": "Income versus Expenditure" },
+    { "type": "paragraph", "text": "[Scale diagram — Negative · Neutral · Positive (selected)]", "style": "note" },
+    { "type": "paragraph", "text": "Over the next few years, your projected spending is lower than your projected income. This increases your capacity to take risk with your investments, because you should not need to withdraw from your portfolio." },
+    { "type": "heading", "level": 2, "text": "Investible Assets" },
+    {
+      "type": "table",
+      "headers": ["TYPE", "DESCRIPTION", "VALUE"],
+      "column_widths": ["25%", "50%", "25%"],
+      "column_align": ["left", "left", "left"],
+      "rows": [
+        ["Cash Saving", "NSI savings", "£46,697"],
+        ["Cash Saving", "Virgin Cash ISA", "£41,440"],
+        ["Cash Saving", "Cash Savings", "£11,681"],
+        ["Cash Saving", "Quilter Investment Platform (FNZ), ISA (Shares)", "£74,268"],
+        ["Pension", "Quilter Investment Platform (FNZ), PPP", "£74,422"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Non-Investible Assets" },
+    {
+      "type": "table",
+      "headers": ["TYPE", "DESCRIPTION", "VALUE", "WILLINGNESS TO SELL"],
+      "column_widths": ["20%", "30%", "25%", "25%"],
+      "rows": [
+        ["Other",    "Cars & Contents",                "£25,000",  "Low"],
+        ["Property", "Holiday Home in Northumberland", "£165,000", "Low"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Income" },
+    {
+      "type": "table",
+      "headers": ["DESCRIPTION", "VALUE", "FREQUENCY", "CERTAINTY", "TIMING"],
+      "column_widths": ["30%", "15%", "15%", "15%", "25%"],
+      "rows": [
+        ["Personal pension", "£45,200", "ANNUALLY", "High", "2026 –"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Spending" },
+    {
+      "type": "table",
+      "headers": ["DESCRIPTION", "NET VALUE", "FREQUENCY", "FLEX", "TIMING"],
+      "column_widths": ["30%", "15%", "15%", "15%", "25%"],
+      "rows": [
+        ["Regular Bills — Joint", "£-2,283", "Monthly", "Low", "2026 –"]
+      ]
+    },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Sustainable investing" },
+    { "type": "paragraph", "text": "This assessment measured your attitudes towards using investments to achieve positive social and environmental outcomes. The results reveal what is important to you when considering environmental, social and governance issues when investing." },
+    { "type": "heading", "level": 2, "text": "Including sustainable investments in your portfolio" },
+    { "type": "paragraph", "text": "The right level of sustainable investments to include in your portfolio is determined by your attitudes as well as your financial objectives." },
+    { "type": "paragraph", "text": "[Scale diagram — Low · Medium Low (selected) · Medium · Medium High · High]", "style": "note" },
+    { "type": "heading", "level": 2, "text": "Impact Desire" },
+    { "type": "paragraph", "text": "How much investors want to align their portfolio to social and sustainability goals." },
+    { "type": "paragraph", "text": "[Scale diagram — Low · Medium (selected) · High]", "style": "note" },
+    { "type": "paragraph", "text": "You have a moderate desire to seek investments that target sustainability and social good. You should include sustainable investments in your portfolio wherever these are consistent with your financial objectives." },
+    { "type": "heading", "level": 2, "text": "Impact Apprehension" },
+    { "type": "paragraph", "text": "Apprehension about sustainable investing, for example that it is too complex or too new." },
+    { "type": "paragraph", "text": "[Scale diagram — Low · Medium (selected) · High]", "style": "note" },
+    { "type": "paragraph", "text": "Your impact apprehension score is medium, which means you are somewhat apprehensive about sustainable investing. The unfamiliarity, or additional complexity, of weaving social and sustainable values into your portfolio leaves you slightly daunted, but even so you are not completely put off." },
+    { "type": "heading", "level": 2, "text": "Need For Evidence" },
+    { "type": "paragraph", "text": "How much an investor requires convincing to engage with sustainable investing." },
+    { "type": "paragraph", "text": "[Scale diagram — Low · Medium (selected) · High]", "style": "note" },
+    { "type": "paragraph", "text": "You have a medium need for evidence, which means that you may need to see some, but not a great deal of, evidence that an investment will likely deliver a promised positive social impact. Make sure your investments are meeting your sustainability requirements, but don't let this lead to inaction." },
+    { "type": "heading", "level": 2, "text": "Impact Trade-Off" },
+    { "type": "paragraph", "text": "Willingness to accept reduced financial returns, reduced liquidity, or extra risk, in exchange for social impact." },
+    { "type": "paragraph", "text": "[Scale diagram — Low (selected) · Medium · High]", "style": "note" },
+    { "type": "paragraph", "text": "Your impact trade-off score is low, which means you have a low willingness to give up financial outcomes (e.g. take more risk, get lower returns, or reduce liquidity) to do more good with your investments. You may prefer to include sustainable or social investments only where they also contribute to your financial aims." },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Individual Responses" },
+    { "type": "heading", "level": 2, "text": "Financial Personality Assessment" },
+    {
+      "type": "table",
+      "headers": ["REF", "QUESTION:", "ANSWER VALUE"],
+      "column_widths": ["8%", "67%", "25%"],
+      "rows": [
+        ["1",  "I often make financial decisions quickly and regret them later.", "Strongly Disagree"],
+        ["2",  "I would risk losses to get potentially greater long-term gains.", "Strongly Disagree"],
+        ["3",  "I expect higher investment growth and I am willing to accept a higher possibility of large losses.", "Strongly Disagree"],
+        ["4",  "My emotions influence my financial decision-making.", "Strongly Disagree"],
+        ["5",  "I would worry about my investments frequently fluctuating in value.", "Disagree"],
+        ["6",  "If there is a chance of making better long-term returns, I am prepared to take higher investment risks.", "Disagree"],
+        ["7",  "I am more prepared to take investment risks than other people.", "Strongly Disagree"],
+        ["8",  "I prefer to invest in things I know well.", "Neutral"],
+        ["9",  "I avoid investments that are unfamiliar to me.", "Neutral"],
+        ["10", "I am comfortable with the possibility of ending up with less than I expect, for the chance of ending up with more than I expect.", "Strongly Disagree"],
+        ["11", "I am well informed about investing.", "Disagree"],
+        ["12", "I would worry about losing money on financial markets.", "Agree"],
+        ["13", "I get worried when my investments drop in value.", "Disagree"],
+        ["14", "I am comfortable with uncertainty when investing my money.", "Strongly Disagree"],
+        ["15", "I am willing to put a significant part of my wealth in high-risk investments.", "Strongly Disagree"],
+        ["16", "I am prepared to participate in market downturns and upswings rather than receive more consistent annual returns.", "Disagree"],
+        ["17", "I am an experienced investor.", "Disagree"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Knowledge and Experience" },
+    {
+      "type": "table",
+      "headers": ["REF", "QUESTION:", "ANSWER VALUE"],
+      "column_widths": ["8%", "67%", "25%"],
+      "rows": [
+        ["1", "How long have you invested in financial markets?", "More than 3 years"],
+        ["2", "How do you rate your own knowledge?", "Basic"],
+        ["3", "Where does your investment knowledge come from?", "Reading books, articles and/or websites"],
+        ["4", "Diversifying your portfolio across many types of investments helps to reduce risk.", "Agree"],
+        ["5", "Past performance is not always a good indicator of future returns.", "Agree"],
+        ["6", "Investments may go down as well as up.", "Strongly Agree"],
+        ["7", "Good investing requires committing money for the medium to long term.", "Agree"],
+        ["8", "A portfolio that has a large proportion of stocks and shares may lose a significant amount of its value.", "Neutral"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Attitudes to Sustainable Investing" },
+    {
+      "type": "table",
+      "headers": ["REF", "QUESTION:", "ANSWER VALUE"],
+      "column_widths": ["8%", "67%", "25%"],
+      "rows": [
+        ["1", "I would be willing to take greater financial risk if an investment had social or environmental benefits.", "Strongly Disagree"],
+        ["2", "I would like to invest in organisations that actively pursue sustainability.", "Agree"],
+        ["3", "I would like to proactively seek investments in organisations that adopt progressive environmental, social or governance practices.", "Neutral"],
+        ["4", "I would need quantitative evidence to convince me an investment had a social or environmental impact.", "Agree"],
+        ["5", "I would accept a lower financial return if an investment had social or environmental benefits.", "Disagree"],
+        ["6", "I would need real-life examples to convince me an investment had a social or environmental impact.", "Agree"],
+        ["7", "Sustainable investing seems complex.", "Neutral"],
+        ["8", "I wouldn't mind locking up portions of my wealth for long periods if an investment had social or environmental benefits.", "Disagree"],
+        ["9", "I don't know enough about sustainable investing.", "Agree"]
+      ]
+    },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Adviser notes" },
+    { "type": "paragraph", "text": "The calculated risk level for this client is 1, but an agreed risk level of 4 was established. Client has guaranteed pension income that more than covers their expenditure. Investments remain long-term and they have been at ease with the current risk level and associated volatility for a long period of time." }
+
+  ]
+}
