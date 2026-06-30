@@ -10,9 +10,9 @@
     "title": "FULL REPORT",
     "subtitle": "Powered by Oxford Risk ©",
     "logo": "../assets/DefaultLogo.png",
-    "background_color": "#ffffff",
-    "title_color": "#111111",
-    "subtitle_color": "#888888"
+    "background_image": "../assets/abstract_cover.jpg",
+    "title_color": "#ffffff",
+    "subtitle_color": "#b0d4ff"
   },
 
   "header": {

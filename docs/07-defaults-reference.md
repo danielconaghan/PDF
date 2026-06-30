@@ -33,48 +33,90 @@ This is the complete `defaults.json` with every key annotated. Your document is 
 
   // ── Named paragraph styles ────────────────────────────────────────────────
   "styles": {
+    // Base heading style. h2 and h3 extend this.
     "h1": {
       "font":         "Helvetica-Bold",
       "size":         24,
       "color":        "#1a1a2e",
       "leading":      28,
       "space_before": 24,
-      "space_after":  8
+      "space_after":  8,
+      "left_indent":  0,
+      "right_indent": 0,
+      "alignment":    "left"
     },
     "h2": {
-      "extends":      "h1",  // Inherits all h1 properties, then overrides below
+      "extends":      "h1",  // Inherits font, color, alignment from h1
       "size":         18,
       "leading":      22,
-      "space_before": 18
+      "space_before": 18,
+      "space_after":  8,
+      "left_indent":  0,
+      "right_indent": 0
     },
     "h3": {
       "extends":      "h1",
       "size":         14,
       "leading":      18,
-      "space_before": 14
+      "space_before": 14,
+      "space_after":  8,
+      "left_indent":  0,
+      "right_indent": 0
     },
+    // Base body style. caption, table_header, and toc_h* extend this.
     "body": {
       "font":         "Helvetica",
       "size":         11,
       "color":        "#333333",
       "leading":      16,
       "space_before": 0,
-      "space_after":  8
+      "space_after":  8,
+      "left_indent":  0,
+      "right_indent": 0,
+      "alignment":    "left"
     },
     "caption": {
       "extends":      "body",
       "size":         9,
-      "color":        "#888888"
+      "color":        "#888888",
+      "space_before": 0,
+      "space_after":  4,
+      "left_indent":  0,
+      "right_indent": 0
     },
-    // TOC entry styles — one per depth level
     "table_header": {
       "extends":      "body",
       "font":         "Helvetica-Bold",
-      "color":        "#ffffff"
+      "color":        "#ffffff",
+      "space_before": 0,
+      "space_after":  0,
+      "left_indent":  0,
+      "right_indent": 0
     },
-    "toc_h1": { "extends": "body", "font": "Helvetica-Bold" },
-    "toc_h2": { "extends": "body", "left_indent": 16 },
-    "toc_h3": { "extends": "body", "left_indent": 32, "size": 10 }
+    // TOC entry styles — one per depth level
+    "toc_h1": {
+      "extends":      "body",
+      "font":         "Helvetica-Bold",
+      "space_before": 4,
+      "space_after":  2,
+      "left_indent":  0,
+      "right_indent": 0
+    },
+    "toc_h2": {
+      "extends":      "body",
+      "space_before": 0,
+      "space_after":  2,
+      "left_indent":  16,
+      "right_indent": 0
+    },
+    "toc_h3": {
+      "extends":      "body",
+      "size":         10,
+      "space_before": 0,
+      "space_after":  1,
+      "left_indent":  32,
+      "right_indent": 0
+    }
   },
 
   // ── Cover page ────────────────────────────────────────────────────────────
@@ -86,7 +128,8 @@ This is the complete `defaults.json` with every key annotated. Your document is 
     "date":             "",       // Bottom-right
     "logo":             null,     // Path to logo. Triggers split design when set.
     "logo_align":       "left",   // Currently unused — logo is always centred in band
-    "background_color": "#1a1a2e",// Dark body background
+    "background_color": "#1a1a2e",// Solid background (used when background_image is null)
+    "background_image": null,     // Path to image. Scales to fill the page. Replaces background_color.
     "title_color":      "#ffffff",
     "subtitle_color":   "#cccccc" // Also used for author and date text
   },

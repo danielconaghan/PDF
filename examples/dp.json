@@ -1,0 +1,395 @@
+{
+  "document": {
+    "title": "Client Profile Report — Daniel Conaghan",
+    "author": "Rebecca Palmer, Divitio Wealth",
+    "subject": "Investment Risk Profile and Sustainability Preferences",
+    "keywords": ["risk profile", "Dynamic Planner", "sustainability", "ESG", "Daniel Conaghan"]
+  },
+
+  "cover": {
+    "title": "Client Profile Report",
+    "subtitle": "Daniel Conaghan",
+    "author": "Prepared by: Rebecca Palmer",
+    "date": "15 Nov 2021",
+    "background_image": "../assets/abstract_cover.jpg",
+    "title_color": "#ffffff",
+    "subtitle_color": "#b0d4ff"
+  },
+
+  "header": {
+    "left": "Daniel Conaghan — 15 Sep 2021",
+    "separator": true
+  },
+
+  "footer": {
+    "left": "Divitio Wealth",
+    "center": "Client Profile Report",
+    "separator": false
+  },
+
+  "styles": {
+    "h1": {
+      "font": "Helvetica-Bold",
+      "size": 26,
+      "color": "#1a2e44",
+      "leading": 32,
+      "space_before": 0,
+      "space_after": 12
+    },
+    "h2": {
+      "font": "Helvetica-Bold",
+      "size": 13,
+      "color": "#3a8a85",
+      "leading": 17,
+      "space_before": 18,
+      "space_after": 6
+    },
+    "h3": {
+      "font": "Helvetica-Bold",
+      "size": 11,
+      "color": "#3a8a85",
+      "leading": 15,
+      "space_before": 12,
+      "space_after": 4
+    },
+    "body": {
+      "font": "Helvetica",
+      "size": 10,
+      "color": "#444444",
+      "leading": 15,
+      "space_before": 0,
+      "space_after": 8
+    },
+    "caption": {
+      "extends": "body",
+      "size": 8,
+      "color": "#888888"
+    },
+    "note": {
+      "extends": "body",
+      "size": 9,
+      "color": "#999999"
+    },
+    "discussion": {
+      "font": "Helvetica-Bold",
+      "size": 10,
+      "color": "#333333",
+      "leading": 15,
+      "space_before": 4,
+      "space_after": 4
+    },
+    "toc_h1": {
+      "font": "Helvetica-Bold",
+      "size": 11,
+      "color": "#3a8a85",
+      "leading": 10,
+      "space_before": 1,
+      "space_after": 1
+    },
+    "toc_h2": { "extends": "body", "left_indent": 16 },
+    "toc_h3": { "extends": "body", "left_indent": 32, "size": 9 }
+  },
+
+  "table_style": {
+    "header_background": "#4a9ea8",
+    "header_color": "#ffffff",
+    "header_font": "Helvetica-Bold",
+    "header_align": "left",
+    "body_font": "Helvetica",
+    "body_color": "#444444",
+    "font_size": 10,
+    "cell_padding": 7,
+    "alternate_rows": true,
+    "alternate_color": "#f5f9f9",
+    "grid_color": "#d4e8ea",
+    "grid_thickness": 0.5,
+    "space_before": 8,
+    "space_after": 16
+  },
+
+  "content": [
+
+    { "type": "toc", "title": "In this report", "depth": 1 },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Welcome to your Client Profile Report" },
+    { "type": "paragraph", "text": "Dear Daniel," },
+    { "type": "paragraph", "text": "To help us ensure that your investments are suitable for your personal circumstances, we asked you to complete a risk profile questionnaire. This assessed your willingness and ability to take investment risk. The following report documents the answers you gave, together with notes on any areas that required further discussion with you." },
+    { "type": "paragraph", "text": "We also needed to understand which preferences you may have when it comes to your investments impact on Sustainability (sometimes known as ESG) issues. We asked you to complete a specially designed questionnaire that uses psychological research techniques to help achieve this." },
+    { "type": "paragraph", "text": "As a result of your answers and our subsequent discussions, we have been able to determine an appropriate risk profile for you. In this report, we explain how this risk profile fits with your attitude towards investing. We also selected a Sustainability profile, reflecting your investing preferences." },
+    { "type": "paragraph", "text": "We also outline a benchmark asset allocation representing your risk profile, and indicate the risk and return you could expect from this portfolio. Please note these returns are for illustration only and are not guaranteed." },
+    { "type": "paragraph", "text": "We hope you find this Profiling Report useful. Please contact me if you would like to discuss any aspect further. Or if you would like to know how I can help you select suitable investments, please don't hesitate to get in touch." },
+    { "type": "paragraph", "text": "Kind regards,\nRebecca Palmer" },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "1. Understanding your risk profile" },
+    { "type": "paragraph", "text": "To determine an appropriate investment risk profile for you, I asked you a series of questions about your investment experience and your attitude to and capacity for taking investment risk. The questions and answers you gave are detailed below." },
+    { "type": "heading", "level": 2, "text": "Your investment experience" },
+    { "type": "paragraph", "text": "You were asked 8 questions about your experience of investing — here are the questions and the answers you chose." },
+    {
+      "type": "table",
+      "headers": ["Question", "Your responses"],
+      "column_widths": ["65%", "35%"],
+      "rows": [
+        ["1  Other than a current account, have you ever had a cash savings account, a cash ISA or savings bonds (e.g. from a bank, building society or NS&I)?", "Yes, without taking professional financial advice"],
+        ["2  Have you ever had a pension where you could choose the funds you invest in?", "Yes, both with and without taking professional financial advice"],
+        ["3  Have you ever had a stocks and shares ISA, or a professionally managed investment fund such as an OEIC, unit trust or investment bond?", "Yes, without taking professional financial advice"],
+        ["4  Have you ever bought or sold individual shares on the stock market?", "Yes, without taking professional financial advice"],
+        ["5  How often do you review the value of your pensions or investments?", "Less often than once a year"],
+        ["6  If the value of your pensions or investments has ever fallen substantially, how did you respond?", "Took some or all of the remaining money out of the investment"],
+        ["7  How would you describe your level of investment confidence?", "Somewhat confident: I'm comfortable with some investments but still need some things explained to me"],
+        ["8  If you would like to make any other comment about your previous investment experience (e.g. buy to let), background or education which you feel is relevant here, please do so (optional):", ""]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Your attitude to risk" },
+    { "type": "paragraph", "text": "As part of our ongoing service, we look regularly to review your attitude to taking investment risk by asking you 15 questions. The questions and the most recent answers you have given are below." },
+    {
+      "type": "table",
+      "headers": ["Question", "Your responses"],
+      "column_widths": ["65%", "35%"],
+      "rows": [
+        ["1  To achieve financial success, I would take financial risks", "Agree"],
+        ["2  I would take more financial risk if there was a chance I could make a lot of money", "Disagree"],
+        ["3  I am the kind of person who takes financial risks", "Neither agree nor disagree"],
+        ["4  I prefer certainty about the future value of my investments, even if it means making less money", "Disagree"],
+        ["5  Rises and falls in the value of my investments would not worry me", "Agree"],
+        ["6  If the value of my investment fell, even for a short time, it would concern me", "Neither agree nor disagree"],
+        ["7  I would generally avoid investments whose values rise and fall over time", "Agree"],
+        ["8  I would frequently choose investments offering a steady return rather than those which could rise a lot in value", "Disagree"],
+        ["9  Missing an investment opportunity concerns me more than making a loss", "Agree"],
+        ["10  I care more about avoiding losses than making money", "Disagree"],
+        ["11  Taking financial risks causes me a lot of stress", "Agree"],
+        ["12  I would regret deciding not to take a risky investment opportunity if it then performed well", "Agree"],
+        ["13  When considering investing, I would describe myself as:", "Slightly concerned"],
+        ["14  The term I most closely associate with financial risk is:", "Necessity"],
+        ["15  The statement about risk-taking that best describes me is:", "I sometimes take risks"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Your attitude to risk result" },
+    { "type": "paragraph", "text": "Risk profile <b>6 of 10</b>" },
+    { "type": "heading", "level": 2, "text": "Your capacity for risk" },
+    { "type": "paragraph", "text": "You were asked 5 questions about your capacity for risk. The questions and the answers you chose, and what those answers mean for you, are shown below." },
+    {
+      "type": "table",
+      "headers": ["Question", "Your responses"],
+      "column_widths": ["65%", "35%"],
+      "rows": [
+        ["1  Do you have any specific financial goals for this investment? If you have multiple goals, please choose the main one that applies to you.", "Yes — to meet other important financial goals: If this investment fell in value I'd have enough to live on, but couldn't meet these goals"],
+        ["2  How much of your investments could you afford to lose without reducing your future standard of living?", "I could afford a medium loss"],
+        ["3  When is the earliest you plan to take money from your investments?", "Between 1 and 5 years from now"],
+        ["4  How do you plan to take money from your investments?", "Leave it invested and withdraw amounts regularly (e.g. taking it as regular income)"],
+        ["5  How likely is it that you will need to take money from your investments earlier than planned?", "Possibly: I may need to access my investments early e.g. in a financial emergency"]
+      ]
+    },
+    { "type": "heading", "level": 3, "text": "What this means" },
+    { "type": "paragraph", "text": "Your standard of living is secure even if this investment falls in value. However, if you lose money you may not be able to meet some financial goals that are important to you. It is therefore important to balance the level of investment risk you take against the importance of meeting these financial goals." },
+    { "type": "paragraph", "text": "As you can tolerate some loss within your investment portfolio, you may be able to take more investment risk in order to increase the opportunity for investment return. However, you should only take a level of risk with which you are comfortable." },
+    { "type": "paragraph", "text": "Generally speaking the longer you are investing for, the more risk you are able to take. As you are investing for less than 5 years, lower-risk investments may be appropriate in order to reduce the risk of short-term falls in the value of your money." },
+    { "type": "paragraph", "text": "Withdrawing money gradually will allow your investments to continue to benefit from potential growth although they will also be exposed to potential falls in value. If you are taking money out regularly at the same time that your investment is falling in value, you could see your investment reduce in size rapidly. It is a good idea to review the level of risk of your investments regularly to make sure it remains right for you." },
+    { "type": "paragraph", "text": "When investing, it is sensible to have a separate emergency fund that you can use if an unexpected need for money arises. If you feel you will also need to access your investments in an emergency, this could lower the level of investment risk you can afford to take." },
+    { "type": "heading", "level": 2, "text": "Your selected risk profile" },
+    { "type": "paragraph", "text": "Risk Profile <b>6 of 10 — High medium</b>" },
+    { "type": "heading", "level": 3, "text": "What this level of risk represents" },
+    { "type": "paragraph", "text": "Every investment can be described in terms of the amount of risk associated with it. Higher-risk investments tend to experience greater volatility, which means they are likely to go up and down in value more often and by larger amounts than lower-risk investments. In return, higher-risk investments have the potential to produce higher returns over the long term, although this is not guaranteed." },
+    { "type": "paragraph", "text": "For example, investments such as cash deposits and bonds issued by the UK Government (known as gilts) are considered low risk. Property, corporate bonds issued by UK companies as well as other types of global bonds issued by overseas governments and companies are considered medium risk. In the case of global bonds, generally those which pay a higher income are riskier than those which pay a lower income level. Shares in companies in the UK and other developed markets are considered high risk, while shares from companies in emerging markets are considered very high risk. You can reduce the overall risk in a portfolio by using 'diversification' — in other words, spreading your money across different investments. By doing this, you can match your overall portfolio to the level of risk that is right for you." },
+    { "type": "paragraph", "text": "It's important that your investment portfolio matches your willingness and ability to take investment risk. A 'high medium' risk profile shows that your willingness and ability to accept investment risk is slightly above average. A portfolio that matches this risk profile is likely to experience some significant rises and falls in value. So while there is good potential for returns from your investment to match or go above the rate of inflation (in other words, the rate at which the prices of goods and services rise), you also need to accept that your investment is likely to fall in value from time to time, particularly in the short term." },
+    { "type": "paragraph", "text": "A portfolio for this risk profile is most likely to contain mainly medium- and high-risk investments, including Sterling corporate bonds and global bonds including higher income types as well as Property and shares. The shares are expected to be held mainly in the UK and other developed markets, but there is also likely to be some in higher-risk emerging markets. As a result, you should always check that you are comfortable with what's included." },
+    { "type": "paragraph", "text": "Dynamic Planner risk profile descriptions have been approved by the Plain English Campaign.", "style": "caption" },
+    { "type": "heading", "level": 3, "text": "Discussion notes" },
+    { "type": "paragraph", "text": "<b>After a discussion around your short term and long term goals, we agreed that the level of risk you are currently taking was acceptable.</b>", "style": "discussion" },
+    { "type": "heading", "level": 3, "text": "How your risk-profiled portfolio might perform" },
+    { "type": "paragraph", "text": "Based on your selected risk profile, you may experience a range of investment outcomes. The simple forecast below illustrates how your portfolio may change in value over time, excluding any withdrawals or future contributions you may make." },
+    {
+      "type": "table",
+      "headers": ["Value of investment", "Be prepared for this", "Plan for this", "Be pleasantly surprised", "Not invested"],
+      "column_widths": ["22%", "18%", "15%", "25%", "20%"],
+      "column_align": ["left", "right", "right", "right", "right"],
+      "style": { "header_background": "#2e5f6a" },
+      "rows": [
+        ["Initially",        "£10,000", "£10,000", "£10,000", "£10,000"],
+        ["After 1 year",     "£8,410",  "£10,200", "£12,400", "£9,760"],
+        ["After 5 years",    "£7,150",  "£11,000", "£16,900", "£8,840"],
+        ["After 10 years",   "£6,580",  "£12,100", "£22,200", "£7,810"],
+        ["After 20 years",   "£6,180",  "£14,600", "£34,600", "£6,100"]
+      ]
+    },
+    { "type": "paragraph", "text": "The forecast estimates typical returns for an investment portfolio at this risk profile for different time periods and under different market conditions. The actual amounts could be more than the 'Be pleasantly surprised' estimates or less than the 'Be prepared for this' estimates. The figures take into account the effect of inflation, while 'Not invested' shows how inflation would reduce the spending power of the initial investment amount if it remained uninvested." },
+    { "type": "paragraph", "text": "This is a stochastic projection of the Benchmark Asset Allocation (Index) with a deduction of average charges for this risk profile. Be prepared for this is the 5th percentile, plan for this the 50th percentile and be pleasantly surprised is the 95th percentile. The projections are real returns net of whatever inflation may be. It is therefore different to the Estimated Potential Growth rate.", "style": "caption" },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "2. Typical investments for your profile" },
+    { "type": "paragraph", "text": "The way in which investments differ in risk is mainly down to the things that they invest in, known as assets. An asset is anything that has a value, and which can be bought, sold or exchanged. In investment, different groups of assets are known as asset classes. The best-known of these are cash (e.g. bank deposits), bonds (e.g. gilts issued by the UK government, which pay a fixed regular income and return capital to investors after a set term) and equities (i.e. company shares that pay a variable dividend and whose price can change with market demand)." },
+    { "type": "paragraph", "text": "These assets all offer differing potential for risk and return. For example, if you hold most of your money in cash deposits then your risk of losing money is low but returns will also be modest. If you invest most of your money in shares, the potential for return increases over the long term, but the risk of seeing the value of your investment fall in the short term also rises." },
+    { "type": "paragraph", "text": "Different asset classes tend to perform well in different economic conditions. For example, shares tend to do well during periods of economic growth whereas bonds see their value rise when the economy slows. By holding a blend of assets, investors can increase their potential to perform throughout the economic cycle." },
+    { "type": "heading", "level": 2, "text": "Risk profile 6 benchmark asset allocation" },
+    { "type": "paragraph", "text": "We provide an example for each risk profile to enable you to understand the kind of investments that represent this risk profile. We refer to it as a benchmark asset allocation because it is used not only to calculate how your investment might perform (including the expected volatility, value at risk and expected returns) but is also an index that can be used as a benchmark to measure the performance of your actual investment." },
+    { "type": "paragraph", "text": "Below is the benchmark asset allocation for your selected risk profile." },
+    {
+      "type": "chart",
+      "chart_type": "pie",
+      "width": "70%",
+      "align": "center",
+      "style": {
+        "height_ratio": 0.85,
+        "colors": ["#4a9ea8", "#2e5f6a", "#6bbec7", "#1a3a40", "#89cfd6", "#3a7a82", "#a8dde2", "#163038", "#5ab0ba", "#d0eef1"],
+        "legend": true
+      },
+      "data": {
+        "labels": ["UK Equity", "North American Equity", "Developed Market ex-UK Equity", "Japanese Equity", "Asia Pacific ex Japan Equity", "Emerging Market Equity", "Sterling Corporate Bonds", "Global Investment Grade Bonds", "Property", "Cash (Money Markets)"],
+        "series": [
+          { "values": [23, 22, 6, 7, 9, 10, 10, 4, 5, 4] }
+        ]
+      }
+    },
+    { "type": "paragraph", "text": "When we recommend an investment to you it may either be a solution that bears one of the Dynamic Planner badges, marked with your risk profile number, selected to match your personal needs and preferences; or a portfolio of individual funds, based on the benchmark asset allocation shown above, adjusted using my expertise to take into account our understanding of current market conditions and your personal needs and preferences." },
+    { "type": "paragraph", "text": "[Dynamic Planner fund badges — not yet supported: requires an inline image element type]", "style": "note" },
+    { "type": "paragraph", "text": "This benchmark asset allocation is designed to provide the potential for higher returns than cash deposits. It is also highly diversified to protect against falls in any individual area of the investment market. The level of income generated by this portfolio may fall and rise. The portfolio includes some overseas investments, which may see additional fluctuations in value because of changes in currency exchange rates." },
+    { "type": "paragraph", "text": "It is assumed that this asset allocation will be constructed using pooled investment funds. Although the capital value of investment funds may fluctuate, and you are not guaranteed to receive back the original amount invested, the risk of loss is much less than for an investment made directly in the stock market — for example into individual company shares." },
+    { "type": "paragraph", "text": "Using the suggested benchmark allocation, you could expect the below outcomes, though it is important to note that these are not guaranteed, and the figures could be higher or lower." },
+    {
+      "type": "table",
+      "column_widths": ["75%", "25%"],
+      "style": {
+        "alternate_rows": false,
+        "header_background": "#2e5f6a",
+        "cell_padding": 10
+      },
+      "headers": ["Metric", "Value"],
+      "rows": [
+        ["<b>Expected return</b>\nThe average return (net of inflation) you could expect by taking this risk based on a projection of the Dynamic Planner index for this risk profile. Note that this measure takes into account the small possibility of a very high return. This means that the rate is larger than the 'plan for this' outcome in the projection.", "3.49%"],
+        ["<b>Value at risk</b>\nThere can be big one year falls in value. We expect that 95% of the time this investment would fall by no more than -19.26% over one year.", "-19.26%"],
+        ["<b>Expected volatility</b>\nEach day the returns will be different, positive or negative, we expect these to vary by 11.71% from the average return (aka Standard Deviation).", "11.71%"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Past performance of your benchmark asset allocation" },
+    { "type": "paragraph", "text": "This chart shows the aggregated past performance of the Dynamic Planner benchmark asset allocation over the past year. Remember that past performance is not a guarantee for future performance and the actual performance of your own portfolio will depend upon how your selected investments perform, their tax treatment and any charges incurred." },
+    {
+      "type": "chart",
+      "chart_type": "line",
+      "style": {
+        "height_ratio": 0.45,
+        "colors": ["#4a9ea8"],
+        "grid": true,
+        "grid_color": "#e0e8ea",
+        "line_width": 2.0,
+        "legend": true
+      },
+      "data": {
+        "labels": ["Sep 20", "Oct 20", "Nov 20", "Dec 20", "Jan 21", "Feb 21", "Mar 21", "Apr 21", "May 21", "Jun 21", "Jul 21", "Aug 21", "Sep 21"],
+        "series": [
+          { "name": "Dynamic Planner 6", "values": [-2.1, -3.8, 3.2, 5.5, 4.8, 5.2, 7.1, 9.4, 9.8, 11.2, 10.4, 13.8, 14.6] }
+        ]
+      }
+    },
+    { "type": "paragraph", "text": "Source: MSCI. MSCI makes no express or implied warranties or representations and shall have no liability whatsoever with respect to any MSCI data contained herein. The MSCI data may not be further redistributed or used as a basis for other indexes or any securities or financial products. This report is not approved, endorsed, reviewed or produced by MSCI. None of the MSCI data is intended to constitute investment advice or a recommendation to make (or refrain from making) any kind of investment decision and may not be relied on as such.", "style": "caption" },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "3. How do other risk profiles compare?" },
+    { "type": "paragraph", "text": "Selecting a higher or lower risk profile would likely result in different outcomes in terms of the investment returns, volatility of your journey and value of money at risk. The table and graph below illustrate the future expected outcomes and past performance of the risk profiles either side of your selected profile." },
+    {
+      "type": "table",
+      "headers": ["", "One profile lower (5)", "Your selected profile (6)", "One profile higher (7)"],
+      "column_widths": ["34%", "22%", "22%", "22%"],
+      "column_align": ["left", "right", "right", "right"],
+      "style": { "header_background": "#2e5f6a" },
+      "rows": [
+        ["<b>Expected return</b>\nInvestment returns per annum net of inflation on average over time would be this value", "2.68%", "3.49%", "4.37%"],
+        ["<b>Value at risk</b>\nPotential value at risk. We expect that 95% of the time investments in this profile would fall by no more than this value", "-16.18%", "-19.26%", "-22.90%"],
+        ["<b>Expected volatility</b>\nEach day the returns will be different, positive or negative, we expect these to vary by this value from the average return (aka Standard Deviation)", "9.84%", "11.71%", "13.93%"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Past performance" },
+    { "type": "paragraph", "text": "This chart shows the aggregated past performance of the Dynamic Planner benchmark asset allocation over the past year. Remember that past performance is not a guarantee for future performance and the actual performance of your own portfolio will depend upon how your selected investments perform, their tax treatment and any charges incurred." },
+    {
+      "type": "chart",
+      "chart_type": "line",
+      "style": {
+        "height_ratio": 0.45,
+        "colors": ["#4a9ea8", "#89cfd6", "#2e5f6a"],
+        "grid": true,
+        "grid_color": "#e0e8ea",
+        "line_width": 2.0,
+        "legend": true
+      },
+      "data": {
+        "labels": ["Sep 20", "Oct 20", "Nov 20", "Dec 20", "Jan 21", "Feb 21", "Mar 21", "Apr 21", "May 21", "Jun 21", "Jul 21", "Aug 21", "Sep 21"],
+        "series": [
+          { "name": "Dynamic Planner 6", "values": [-2.1, -3.8, 3.2, 5.5, 4.8, 5.2, 7.1, 9.4, 9.8, 11.2, 10.4, 13.8, 14.6] },
+          { "name": "Dynamic Planner 5", "values": [-1.8, -2.9, 2.5, 4.2, 3.9, 4.4, 5.8, 7.6, 8.1,  9.4,  9.0, 11.5, 12.1] },
+          { "name": "Dynamic Planner 7", "values": [-2.6, -4.8, 4.1, 6.9, 5.8, 6.3, 8.7, 11.4, 11.9, 13.3, 12.1, 16.2, 17.4] }
+        ]
+      }
+    },
+    { "type": "paragraph", "text": "Source: MSCI. MSCI makes no express or implied warranties or representations and shall have no liability whatsoever with respect to any MSCI data contained herein.", "style": "caption" },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "4. Understanding your sustainability preferences" },
+    { "type": "paragraph", "text": "To understand whether you consider it important to invest in sustainable investment solutions, we asked a series of questions to determine your preferences. The questions and answers you gave are detailed below." },
+    {
+      "type": "table",
+      "headers": ["Question", "Your responses"],
+      "column_widths": ["65%", "35%"],
+      "rows": [
+        ["1  I would enjoy knowing my investments had holdings in companies that positively impact the environment and society", "Strongly agree"],
+        ["2  It is a priority that my investments should help improve people's living conditions", "Agree"],
+        ["3  It is not important that my personal values and beliefs are reflected within the companies I invest in", "Agree"],
+        ["4  I would feel inspired knowing that companies I invest in are trying to manage their environmental and social risks", "Agree"],
+        ["5  It is a priority that I help companies treat all stakeholders fairly", "Neither agree nor disagree"],
+        ["6  I rarely think about how the behaviour of companies I invest in might impact the environment and society in future", "Disagree"],
+        ["7  Encouraging companies to improve their environmental and social impact is the right thing to do for the future", "Agree"],
+        ["8  It is a priority that my investments help to improve the environment", "Agree"],
+        ["9  I would be happy with however a company behaves as long as its share price is not negatively affected", "Disagree"],
+        ["10  I would like an asset manager to actively encourage a company to improve its environmental and social impact", "Neither agree nor disagree"],
+        ["11  I would like to find a way of prioritising how my investments can do good rather than harm, even if that means my returns may be lower", "Neither agree nor disagree"],
+        ["12  I would not want to miss out on investment opportunities even if that means including companies that are not environmentally friendly", "Disagree"],
+        ["13  I would like the opportunity to exclude controversial and unsustainable companies from my investment portfolio by understanding what practices they are engaged in", "Neither agree nor disagree"],
+        ["14  I do not want to invest in a company if it does not have specific measurable objectives of delivering a positive impact on the environment and society", "Agree"],
+        ["15  Investing in areas such as Armaments / Fossil Fuels / Tobacco / Gambling / Pornography / Alcohol / Nuclear is acceptable to me, as long as it is profitable", "Neither agree nor disagree"]
+      ]
+    },
+    { "type": "heading", "level": 2, "text": "Background on our questionnaire" },
+    { "type": "paragraph", "text": "In order to understand your sustainable investment preferences, the questionnaire you completed examined your views on Environmental, Social and Governance issues using the following underlying themes:" },
+    { "type": "paragraph", "text": "<b>Psychological distance</b> — how important it is that companies you invest in manage their risks for your benefit as well as others." },
+    { "type": "paragraph", "text": "<b>Personal values</b> — how important it is that your values and beliefs are taken into consideration when making recommendations." },
+    { "type": "paragraph", "text": "<b>Emotional benefit</b> — how you would feel knowing that companies you invest in have a negative or positive impact on the environment and society." },
+    { "type": "paragraph", "text": "<b>Positive impact</b> — the extent in which you would like to actively engage with companies to ensure that your investments have a positive impact on the environment and society at large." },
+    { "type": "paragraph", "text": "<b>Financial considerations</b> — how willing you are to reduce your investment opportunities for the benefit of the environment and society, and to accommodate your personal values." },
+    { "type": "heading", "level": 2, "text": "Your sustainability questionnaire result" },
+    { "type": "paragraph", "text": "<b>Result for Daniel:</b> Somewhat important" },
+    { "type": "paragraph", "text": "Weighing up the results of the questionnaire and our discussion, we agreed that Sustainability preferences are <b>Somewhat important</b> to you." },
+    { "type": "heading", "level": 2, "text": "Your selected sustainability profile" },
+    { "type": "paragraph", "text": "Your answers suggest that whilst not the most important thing, you <b>would want some consideration</b> of Sustainability to be made with any solution we recommend." },
+    { "type": "paragraph", "text": "We will consider these factors in our research alongside your other preferences." },
+    { "type": "heading", "level": 2, "text": "What does investing sustainably mean?" },
+    { "type": "paragraph", "text": "Solutions here <b>may not</b> necessarily be rated <b>average amongst their peers</b> when assessing the underlying holdings across a <b>broad range</b> of Environmental, Social and Governance (ESG) criteria." },
+    { "type": "paragraph", "text": "The asset manager may also actively engage with companies they invest in to seek continual improvement in the management of their business practices, which can include ESG criteria." },
+    { "type": "page_break" },
+
+    { "type": "heading", "level": 1, "text": "Confirmation" },
+    { "type": "paragraph", "text": "I confirm that I have read and understand the full content of this report." },
+    {
+      "type": "table",
+      "column_widths": ["50%", "50%"],
+      "style": { "alternate_rows": false, "header_background": "#f5f9f9", "header_color": "#444444", "header_font": "Helvetica" },
+      "headers": ["Client signature", "Adviser signature"],
+      "rows": [
+        ["", ""],
+        ["Daniel Conaghan", "Rebecca Palmer"],
+        ["", ""],
+        ["Date", "Date"]
+      ]
+    },
+    { "type": "spacer", "height": 24 },
+    { "type": "rule", "color": "#d4e8ea", "thickness": 0.5 },
+    { "type": "heading", "level": 3, "text": "Contact information" },
+    {
+      "type": "table",
+      "column_widths": ["20%", "80%"],
+      "style": { "alternate_rows": false, "grid_color": "#ffffff" },
+      "rows": [
+        ["<b>Email:</b>", "rebeccapalmer@dynamicplanner.com"]
+      ]
+    }
+
+  ]
+}

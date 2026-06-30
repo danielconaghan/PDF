@@ -185,6 +185,29 @@ def _draw_footer(canv, doc, config):
     canv.restoreState()
 
 
+def _draw_cover_background(canv, bg_image_path, page_w, page_h, bg):
+    """Fill the cover page: background image (scale-to-fill) or solid colour."""
+    if bg_image_path:
+        dims = _image_ratio(bg_image_path)
+        if dims:
+            iw, ih = dims
+            img_ratio = iw / ih
+            page_ratio = page_w / page_h
+            if img_ratio > page_ratio:
+                draw_h = page_h
+                draw_w = page_h * img_ratio
+            else:
+                draw_w = page_w
+                draw_h = page_w / img_ratio
+            draw_x = (page_w - draw_w) / 2
+            draw_y = (page_h - draw_h) / 2
+            canv.drawImage(bg_image_path, draw_x, draw_y,
+                           width=draw_w, height=draw_h, mask="auto")
+            return
+    canv.setFillColor(HexColor(bg))
+    canv.rect(0, 0, page_w, page_h, fill=1, stroke=0)
+
+
 def _draw_cover(canv, doc, config):
     cover = config.get("cover", {})
     base_path = config.get("_base_path")
@@ -194,25 +217,25 @@ def _draw_cover(canv, doc, config):
     bg = cover.get("background_color", "#1a1a2e")
 
     logo_path = resolve_path(cover.get("logo"), base_path)
+    bg_image_path = resolve_path(cover.get("background_image"), base_path)
 
     canv.saveState()
 
     if logo_path and _image_ratio(logo_path):
-        _draw_cover_split(canv, doc, cover, logo_path, page_w, page_h, left, right, bg)
+        _draw_cover_split(canv, doc, cover, logo_path, bg_image_path, page_w, page_h, left, right, bg)
     else:
-        _draw_cover_full(canv, doc, cover, page_w, page_h, left, right, bg)
+        _draw_cover_full(canv, doc, cover, bg_image_path, page_w, page_h, left, right, bg)
 
     canv.restoreState()
 
 
-def _draw_cover_split(canv, doc, cover, logo_path, page_w, page_h, left, right, bg):
+def _draw_cover_split(canv, doc, cover, logo_path, bg_image_path, page_w, page_h, left, right, bg):
     """White top band (logo) over dark body (title/content). Used when a logo is set."""
     band_h = _COVER_BAND_HEIGHT
     band_y = page_h - band_h   # y coordinate of band bottom edge
 
-    # Dark background — full page, then white band painted on top
-    canv.setFillColor(HexColor(bg))
-    canv.rect(0, 0, page_w, page_h, fill=1, stroke=0)
+    # Background — image or solid colour, then white band painted on top
+    _draw_cover_background(canv, bg_image_path, page_w, page_h, bg)
 
     # White top band
     canv.setFillColor(HexColor("#ffffff"))
@@ -258,10 +281,9 @@ def _draw_cover_split(canv, doc, cover, logo_path, page_w, page_h, left, right, 
         canv.drawRightString(right, meta_y, cover["date"])
 
 
-def _draw_cover_full(canv, doc, cover, page_w, page_h, left, right, bg):
-    """Fallback: full dark cover used when no logo is provided."""
-    canv.setFillColor(HexColor(bg))
-    canv.rect(0, 0, page_w, page_h, fill=1, stroke=0)
+def _draw_cover_full(canv, doc, cover, bg_image_path, page_w, page_h, left, right, bg):
+    """Full cover — image or solid colour background with title/subtitle/meta."""
+    _draw_cover_background(canv, bg_image_path, page_w, page_h, bg)
 
     title = cover.get("title", "")
     if title:

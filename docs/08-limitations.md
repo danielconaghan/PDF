@@ -42,8 +42,8 @@ All pages in a document use the same size and orientation. You cannot mix portra
 ### No multi-column layouts
 Content always flows in a single column. Side-by-side columns, magazine-style layouts, and text that wraps around an image are not supported.
 
-### No background images
-The cover page and content pages have solid-colour backgrounds only. A background image tiled or fitted behind page content is not supported.
+### Background images are cover-only
+The `cover.background_image` field accepts a path to a PNG or JPEG and scales it to fill the cover page. Content pages (the pages after the cover) still have solid-white backgrounds only — a repeating or per-page background image is not supported.
 
 ### No absolute positioning
 Every element is placed in document flow — height is determined by content. You cannot pin an element to a fixed position on the page (e.g. a watermark at a specific coordinate), except via the header/footer canvas areas, which are drawn at fixed positions but only support text and a single logo.
