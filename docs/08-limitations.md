@@ -71,8 +71,8 @@ The same inline markup constraints as paragraphs apply to cell content. Full HTM
 
 ## Charts
 
-### Pie charts are single-series
-Only the first series in `data.series` is used for pie charts. Additional series are silently ignored.
+### Pie and donut charts are single-series
+Only the first series in `data.series` is used for `pie` and `donut` charts. Additional series are silently ignored.
 
 ### No stacked bars
 Multiple series in a bar chart are always plotted as grouped (side-by-side) bars. Stacked bar charts are not supported.

@@ -1,7 +1,9 @@
 import io
 
+import numpy as np
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.figure import Figure
+from matplotlib.patches import Circle
 from reportlab.lib.utils import ImageReader
 from reportlab.platypus import Image as RLImage, Paragraph, Spacer
 
@@ -16,7 +18,7 @@ _DEFAULT_COLORS = [
 
 
 def build_chart(element, rl_styles, doc, config):
-    """Return a list of flowables for a bar, line, or pie chart."""
+    """Return a list of flowables for a bar, line, pie, or donut chart."""
     style = {**config.get("chart_style", {}), **element.get("style", {})}
     data = element.get("data", {})
 
@@ -36,7 +38,7 @@ def build_chart(element, rl_styles, doc, config):
     ax = fig.add_subplot(111, facecolor=bg)
 
     chart_type = element.get("chart_type", "bar")
-    _DRAW = {"bar": _draw_bar, "line": _draw_line, "pie": _draw_pie}
+    _DRAW = {"bar": _draw_bar, "line": _draw_line, "pie": _draw_pie, "donut": _draw_donut}
     draw = _DRAW.get(chart_type)
     if draw:
         draw(ax, data, style)
@@ -131,31 +133,69 @@ def _draw_line(ax, data, style):
 
 
 def _draw_pie(ax, data, style):
+    _draw_pie_or_donut(ax, data, style, is_donut=False)
+
+
+def _draw_donut(ax, data, style):
+    _draw_pie_or_donut(ax, data, style, is_donut=True)
+
+
+def _draw_pie_or_donut(ax, data, style, is_donut=False):
     series = data.get("series", [])
     if not series:
         return
 
     values = series[0].get("values", [])
-    labels = data.get("labels", [])
+    labels = list(data.get("labels", []))
+    # Pad labels to match values length
+    while len(labels) < len(values):
+        labels.append("")
+
+    if not values:
+        return
+
     colors = style.get("colors", _DEFAULT_COLORS)
     colors_cycle = [colors[i % len(colors)] for i in range(len(values))]
 
-    _, texts, autotexts = ax.pie(
+    # Draw wedges — no built-in labels or percentages
+    wedges, _ = ax.pie(
         values,
-        labels=labels,
+        labels=None,
         colors=colors_cycle,
-        autopct="%1.1f%%",
         startangle=90,
-        pctdistance=0.72,
         wedgeprops={"edgecolor": "white", "linewidth": 1.5},
     )
-    for at in autotexts:
-        at.set_fontsize(8)
-        at.set_color("white")
-        at.set_fontweight("bold")
-    for t in texts:
-        t.set_fontsize(9)
-        t.set_color("#333333")
+
+    # Donut hole
+    if is_donut:
+        donut_r = style.get("donut_ratio", 0.5)
+        ax.add_patch(Circle((0, 0), donut_r, fc="white", zorder=5))
+
+    # Leader lines + labels with percentages
+    total = sum(v for v in values if v)
+    for wedge, label, value in zip(wedges, labels, values):
+        if not value or total == 0:
+            continue
+        pct = value / total * 100
+        mid_rad = np.radians((wedge.theta1 + wedge.theta2) / 2)
+
+        # Three-point leader: edge of wedge → radial elbow → short horizontal
+        ex = 1.05 * np.cos(mid_rad)
+        ey = 1.05 * np.sin(mid_rad)
+        kx = 1.22 * np.cos(mid_rad)
+        ky = 1.22 * np.sin(mid_rad)
+        tx = kx + (0.12 if kx >= 0 else -0.12)
+        ty = ky
+
+        ax.plot([ex, kx, tx], [ey, ky, ty],
+                color="#aaaaaa", linewidth=0.7, zorder=4)
+
+        ha = "left" if tx >= 0 else "right"
+        pad = 0.025
+        lx = tx + (pad if ha == "left" else -pad)
+        txt = f"{label}\n{pct:.1f}%" if label else f"{pct:.1f}%"
+        ax.text(lx, ty, txt, ha=ha, va="center",
+                fontsize=8, color="#333333", zorder=4, multialignment=ha)
 
     ax.axis("equal")
 
@@ -167,7 +207,7 @@ def _apply_style(ax, style, chart_type):
     for spine in ("top", "right"):
         ax.spines[spine].set_visible(False)
 
-    if chart_type == "pie":
+    if chart_type in ("pie", "donut"):
         for spine in ("bottom", "left"):
             ax.spines[spine].set_visible(False)
         return

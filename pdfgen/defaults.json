@@ -147,6 +147,7 @@
     "line_width":   2.0,
     "dpi":          150,
     "height_ratio": 0.55,
+    "donut_ratio":  0.5,
     "space_before": 12,
     "space_after":  12
   },

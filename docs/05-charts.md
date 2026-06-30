@@ -1,6 +1,6 @@
 # Charts
 
-Charts are rendered by matplotlib into a high-resolution PNG and embedded as an image in the PDF. Three chart types are supported: `bar`, `line`, and `pie`.
+Charts are rendered by matplotlib into a high-resolution PNG and embedded as an image in the PDF. Four chart types are supported: `bar`, `line`, `pie`, and `donut`.
 
 ---
 
@@ -23,7 +23,7 @@ Every chart shares these top-level properties:
 
 | Property | Required | Default | Description |
 |---|---|---|---|
-| `chart_type` | yes | `"bar"` | `"bar"`, `"line"`, or `"pie"`. |
+| `chart_type` | yes | `"bar"` | `"bar"`, `"line"`, `"pie"`, or `"donut"`. |
 | `title` | no | none | Title rendered inside the chart, above the plot area. |
 | `width` | no | `"100%"` | Content width as a percentage (`"80%"`) or absolute points (`"300pt"`). |
 | `align` | no | `"left"` | `"left"`, `"center"`, or `"right"`. Most useful when `width` is less than 100%. |
@@ -98,7 +98,7 @@ The number of values in each series must equal the number of labels.
 
 ## Pie chart
 
-One data series only. Values are segment sizes (they do not need to sum to 100 — matplotlib normalises them automatically). Labels are applied directly to the wedges; percentages are shown inside each wedge.
+Single data series. Values are segment sizes (they do not need to sum to 100 — matplotlib normalises them). Each wedge has a **leader line** connecting it to a label showing the segment name and percentage outside the chart.
 
 ```json
 {
@@ -117,9 +117,55 @@ One data series only. Values are segment sizes (they do not need to sum to 100 �
 }
 ```
 
-Note: `"name"` is not required on a pie series since there is only one.
+`"name"` is not used on pie series since there is only one. Set `"height_ratio"` to `0.9` or higher to give the leader-line labels enough room.
 
-A `height_ratio` of `0.9` (versus the default `0.55`) makes the pie chart taller relative to its width, giving the wedge labels more room.
+---
+
+## Donut chart
+
+Identical to `pie` but with a hollow centre. The hole size is controlled by `donut_ratio` (0–1, default `0.5`), where `0.5` means the inner radius is half the outer radius.
+
+```json
+{
+  "type":       "chart",
+  "chart_type": "donut",
+  "title":      "Strategic Asset Allocation",
+  "width":      "65%",
+  "align":      "center",
+  "style": {
+    "height_ratio": 1.0,
+    "donut_ratio":  0.45
+  },
+  "data": {
+    "labels": ["Global Equities", "Fixed Income", "Alternatives", "Real Assets", "Cash"],
+    "series": [
+      { "values": [45, 30, 15, 5, 5] }
+    ]
+  }
+}
+```
+
+A `height_ratio` of `1.0` (square) works well for donuts with leader-line labels — it gives more vertical room than the default `0.55`.
+
+**`donut_ratio` guidance:**
+
+| Value | Effect |
+|---|---|
+| `0.3` | Thin ring — inner circle is 30% of outer radius |
+| `0.5` | Standard donut (default) |
+| `0.65` | Wide ring — only a narrow band of colour |
+
+---
+
+## Label and leader line behaviour (pie and donut)
+
+Both `pie` and `donut` use the same external label placement. For each wedge:
+
+1. A short line extends radially from the wedge edge.
+2. The line bends at an elbow and ends with a short horizontal segment.
+3. The segment name and percentage (`"Label\n25.0%"`) are placed at the end.
+
+Labels on the right half of the chart are left-aligned; labels on the left half are right-aligned. There is no separate legend for pie or donut charts — the leader lines serve that purpose. Setting `"legend": true` in the style has no effect on these chart types.
 
 ---
 
@@ -135,9 +181,9 @@ A `height_ratio` of `0.9` (versus the default `0.55`) makes the pie chart taller
 }
 ```
 
-- `labels` — array of strings, one per group (bar/line) or segment (pie).
-- `series` — array of series objects. Bar and line support multiple series; pie uses only the first.
-- `name` — series label, shown in the legend. Use `""` to suppress the legend entry for that series.
+- `labels` — array of strings, one per group (bar/line) or segment (pie/donut).
+- `series` — array of series objects. Bar and line support multiple series; pie and donut use only the first.
+- `name` — series label, shown in the legend for bar and line charts. Use `""` to suppress the legend entry.
 - `values` — array of numbers. Must be the same length as `labels`.
 
 ---
@@ -161,11 +207,11 @@ Set global defaults in `chart_style` (top-level) and override per-chart in the e
 ```json
 {
   "type":       "chart",
-  "chart_type": "bar",
+  "chart_type": "donut",
   "style": {
     "colors":       ["#003366", "#2e6da4"],
-    "bar_width":    0.6,
-    "height_ratio": 0.4
+    "donut_ratio":  0.5,
+    "height_ratio": 1.0
   },
   "data": { ... }
 }
@@ -175,17 +221,18 @@ Set global defaults in `chart_style` (top-level) and override per-chart in the e
 
 | Key | Default | Description |
 |---|---|---|
-| `colors` | `["#1a1a2e", "#2e6da4", "#c69b3a", "#4a8b6e", "#8b5a6e", "#4b8fcf"]` | Ordered list of colours. Series are assigned colours by index; the list cycles if there are more series than colours. |
+| `colors` | `["#1a1a2e", "#2e6da4", "#c69b3a", "#4a8b6e", "#8b5a6e", "#4b8fcf"]` | Ordered colour list. Series assigned by index; cycles if more series than colours. |
 | `background` | `"#ffffff"` | Chart and axes background colour. |
-| `grid` | `true` | Show horizontal grid lines on bar and line charts. |
+| `grid` | `true` | Horizontal grid lines on bar and line charts. No effect on pie or donut. |
 | `grid_color` | `"#eeeeee"` | Grid line colour. |
-| `legend` | `true` | Show a legend when series have non-empty names. |
-| `bar_width` | `0.7` | Total grouped bar width as a fraction of the slot width (0–1). Shared across all series in the group. |
+| `legend` | `true` | Show a legend when series have non-empty names. No effect on pie or donut. |
+| `bar_width` | `0.7` | Total grouped bar width as a fraction of slot width (0–1). |
 | `line_width` | `2.0` | Line width in points for line charts. |
-| `dpi` | `150` | Render resolution. Higher values produce sharper charts at the cost of file size. 150 is appropriate for print-quality PDFs. |
-| `height_ratio` | `0.55` | Chart height as a multiple of width. `0.55` produces a slightly wide format; `1.0` produces a square chart. |
-| `space_before` | `12` | Space before the chart in points. |
-| `space_after` | `12` | Space after the chart in points. |
+| `dpi` | `150` | Render resolution. 150 is appropriate for print-quality PDFs. |
+| `height_ratio` | `0.55` | Chart height as a multiple of width. `1.0` = square. |
+| `donut_ratio` | `0.5` | Inner hole radius as a fraction of outer radius. Only used by `donut`. |
+| `space_before` | `12` | Space above the chart in points. |
+| `space_after` | `12` | Space below the chart in points. |
 
 ---
 
@@ -194,7 +241,7 @@ Set global defaults in `chart_style` (top-level) and override per-chart in the e
 ```json
 {
   "type":       "chart",
-  "chart_type": "pie",
+  "chart_type": "donut",
   "width":      "60%",
   "align":      "center"
 }
@@ -202,13 +249,13 @@ Set global defaults in `chart_style` (top-level) and override per-chart in the e
 
 - `width` accepts `"100%"` (default), a percentage like `"60%"`, or an absolute value like `"300pt"`.
 - `align` controls horizontal alignment when `width` is less than 100%.
-- The height is always derived from `width × height_ratio` before rendering, then corrected to the actual rendered image height (so titles and legends are never clipped).
+- Height is derived from `width × height_ratio` before rendering, then corrected to the actual rendered image height so titles and leader lines are never clipped.
 
 ---
 
 ## Practical patterns
 
-**Compact side annotation** — narrow chart beside a table, both in the same section:
+**Compact side annotation** — narrow chart beside a table:
 ```json
 { "type": "chart", "chart_type": "bar", "width": "65%", "align": "left", "data": { ... } }
 ```
@@ -227,13 +274,28 @@ Set global defaults in `chart_style` (top-level) and override per-chart in the e
 }
 ```
 
+**Asset allocation donut** — square, centred, moderate hole:
+```json
+{
+  "type":       "chart",
+  "chart_type": "donut",
+  "width":      "70%",
+  "align":      "center",
+  "style": { "height_ratio": 1.0, "donut_ratio": 0.45 },
+  "data": {
+    "labels": ["Equities", "Bonds", "Alternatives", "Cash"],
+    "series": [{ "values": [55, 30, 10, 5] }]
+  }
+}
+```
+
 ---
 
 ## Limitations
 
-- **Pie charts use only the first series.** Additional series in the `data.series` array are ignored.
+- **Pie and donut use only the first series.** Additional series in `data.series` are silently ignored.
 - **No horizontal bars.** Bars are always vertical.
 - **No stacked bars.** Multiple series are always grouped (side-by-side).
-- **No axis label customisation.** The y-axis label, axis limits, and tick format cannot currently be configured through JSON — they use matplotlib's automatic defaults.
+- **No axis label customisation.** Y-axis label, axis limits, and tick format use matplotlib's automatic defaults.
 - **No interactive elements.** Charts are static images embedded in the PDF.
-- **Pie label overlap.** When a pie chart has many small segments, labels on adjacent wedges may overlap. Reduce the number of segments, or use a legend instead by setting `"legend": true` and omitting labels from `data.labels`.
+- **Leader line overlap on crowded charts.** When a pie or donut has many small segments, the external labels may overlap. Reduce the number of segments (merge small values into "Other"), increase `height_ratio`, or increase `width` to give the labels more room.

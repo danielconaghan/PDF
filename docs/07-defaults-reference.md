@@ -191,6 +191,7 @@ This is the complete `defaults.json` with every key annotated. Your document is 
     "line_width":   2.0,        // Points
     "dpi":          150,        // Render resolution
     "height_ratio": 0.55,       // Chart height = width × height_ratio
+    "donut_ratio":  0.5,        // Inner hole radius as fraction of outer (donut only)
     "space_before": 12,
     "space_after":  12
   },

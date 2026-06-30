@@ -226,13 +226,13 @@
     { "type": "paragraph", "text": "Below is the benchmark asset allocation for your selected risk profile." },
     {
       "type": "chart",
-      "chart_type": "pie",
-      "width": "70%",
+      "chart_type": "donut",
+      "width": "72%",
       "align": "center",
       "style": {
-        "height_ratio": 0.85,
-        "colors": ["#4a9ea8", "#2e5f6a", "#6bbec7", "#1a3a40", "#89cfd6", "#3a7a82", "#a8dde2", "#163038", "#5ab0ba", "#d0eef1"],
-        "legend": true
+        "height_ratio": 1.0,
+        "donut_ratio": 0.45,
+        "colors": ["#4a9ea8", "#2e5f6a", "#6bbec7", "#1a3a40", "#89cfd6", "#3a7a82", "#a8dde2", "#163038", "#5ab0ba", "#d0eef1"]
       },
       "data": {
         "labels": ["UK Equity", "North American Equity", "Developed Market ex-UK Equity", "Japanese Equity", "Asia Pacific ex Japan Equity", "Emerging Market Equity", "Sterling Corporate Bonds", "Global Investment Grade Bonds", "Property", "Cash (Money Markets)"],
