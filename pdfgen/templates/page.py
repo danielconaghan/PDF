@@ -6,7 +6,6 @@ from reportlab.platypus import Frame, PageTemplate
 from ..accessibility import begin_artifact, end_artifact
 from ..utils import resolve_path
 
-_HEADER_FONT = "Helvetica"
 _HEADER_SIZE = 9
 _HEADER_COLOR = "#666666"
 _SEP_COLOR = "#cccccc"
@@ -19,6 +18,14 @@ _COVER_TITLE_SIZE = 32
 _COVER_SUBTITLE_SIZE = 16
 _COVER_META_SIZE = 10
 _HEADER_LOGO_HEIGHT = 20    # logo height on content-page headers
+
+
+def _ui_fonts(config):
+    """Return (regular_font, bold_font) from the resolved config styles."""
+    styles = config.get("_resolved_styles", {})
+    regular = styles.get("body", {}).get("font", "Vera")
+    bold = styles.get("h1", {}).get("font", "Vera-Bold")
+    return regular, bold
 
 
 def _image_ratio(path):
@@ -77,9 +84,10 @@ def make_numbered_canvas_class(config):
 
         def _stamp_page_number(self, num, total):
             page_w, _ = self._pagesize
+            regular_font, _ = _ui_fonts(config)
             begin_artifact(self, "Pagination")
             self.saveState()
-            self.setFont(_HEADER_FONT, _HEADER_SIZE)
+            self.setFont(regular_font, _HEADER_SIZE)
             self.setFillColor(HexColor(_HEADER_COLOR))
             self.drawRightString(
                 page_w - margins["right"],
@@ -141,6 +149,7 @@ def _draw_header(canv, doc, config):
     y_text = page_h - doc.topMargin * 0.55
     y_sep = page_h - doc.topMargin + 4
 
+    regular_font, _ = _ui_fonts(config)
     begin_artifact(canv, "Pagination")
     canv.saveState()
 
@@ -156,11 +165,11 @@ def _draw_header(canv, doc, config):
             canv.drawImage(logo_path, left, y_text - 2, width=logo_w, height=logo_h,
                            preserveAspectRatio=True, mask="auto")
     elif header.get("left"):
-        canv.setFont(_HEADER_FONT, _HEADER_SIZE)
+        canv.setFont(regular_font, _HEADER_SIZE)
         canv.setFillColor(HexColor(_HEADER_COLOR))
         canv.drawString(left, y_text, header["left"])
 
-    canv.setFont(_HEADER_FONT, _HEADER_SIZE)
+    canv.setFont(regular_font, _HEADER_SIZE)
     canv.setFillColor(HexColor(_HEADER_COLOR))
 
     if header.get("center"):
@@ -186,9 +195,10 @@ def _draw_footer(canv, doc, config):
     y_text = doc.bottomMargin * 0.45
     y_sep = doc.bottomMargin - 4
 
+    regular_font, _ = _ui_fonts(config)
     begin_artifact(canv, "Pagination")
     canv.saveState()
-    canv.setFont(_HEADER_FONT, _HEADER_SIZE)
+    canv.setFont(regular_font, _HEADER_SIZE)
     canv.setFillColor(HexColor(_HEADER_COLOR))
 
     if footer.get("left"):
@@ -239,19 +249,20 @@ def _draw_cover(canv, doc, config):
     logo_path = resolve_path(cover.get("logo"), base_path)
     bg_image_path = resolve_path(cover.get("background_image"), base_path)
 
+    regular_font, bold_font = _ui_fonts(config)
     begin_artifact(canv, "Layout")
     canv.saveState()
 
     if logo_path and _image_ratio(logo_path):
-        _draw_cover_split(canv, doc, cover, logo_path, bg_image_path, page_w, page_h, left, right, bg)
+        _draw_cover_split(canv, doc, cover, logo_path, bg_image_path, page_w, page_h, left, right, bg, regular_font, bold_font)
     else:
-        _draw_cover_full(canv, doc, cover, bg_image_path, page_w, page_h, left, right, bg)
+        _draw_cover_full(canv, doc, cover, bg_image_path, page_w, page_h, left, right, bg, regular_font, bold_font)
 
     canv.restoreState()
     end_artifact(canv)
 
 
-def _draw_cover_split(canv, doc, cover, logo_path, bg_image_path, page_w, page_h, left, right, bg):
+def _draw_cover_split(canv, doc, cover, logo_path, bg_image_path, page_w, page_h, left, right, bg, regular_font, bold_font):
     """White top band (logo) over dark body (title/content). Used when a logo is set."""
     band_h = _COVER_BAND_HEIGHT
     band_y = page_h - band_h   # y coordinate of band bottom edge
@@ -284,42 +295,42 @@ def _draw_cover_split(canv, doc, cover, logo_path, bg_image_path, page_w, page_h
     title = cover.get("title", "")
     if title:
         canv.setFillColor(HexColor(cover.get("title_color", "#ffffff")))
-        canv.setFont("Helvetica-Bold", _COVER_TITLE_SIZE)
+        canv.setFont(bold_font, _COVER_TITLE_SIZE)
         canv.drawString(left, title_y, title)
 
     subtitle = cover.get("subtitle", "")
     if subtitle:
         canv.setFillColor(HexColor(cover.get("subtitle_color", "#cccccc")))
-        canv.setFont("Helvetica", _COVER_SUBTITLE_SIZE)
+        canv.setFont(regular_font, _COVER_SUBTITLE_SIZE)
         canv.drawString(left, title_y - _COVER_TITLE_SIZE - 10, subtitle)
 
-    _draw_cover_meta(canv, cover, doc, left, right)
+    _draw_cover_meta(canv, cover, doc, left, right, regular_font)
 
 
-def _draw_cover_full(canv, doc, cover, bg_image_path, page_w, page_h, left, right, bg):
+def _draw_cover_full(canv, doc, cover, bg_image_path, page_w, page_h, left, right, bg, regular_font, bold_font):
     """Full cover — image or solid colour background with title/subtitle/meta."""
     _draw_cover_background(canv, bg_image_path, page_w, page_h, bg)
 
     title = cover.get("title", "")
     if title:
         canv.setFillColor(HexColor(cover.get("title_color", "#ffffff")))
-        canv.setFont("Helvetica-Bold", 36)
+        canv.setFont(bold_font, 36)
         canv.drawString(left, page_h * 0.42, title)
 
     subtitle = cover.get("subtitle", "")
     if subtitle:
         canv.setFillColor(HexColor(cover.get("subtitle_color", "#cccccc")))
-        canv.setFont("Helvetica", 18)
+        canv.setFont(regular_font, 18)
         canv.drawString(left, page_h * 0.42 - 44, subtitle)
 
-    _draw_cover_meta(canv, cover, doc, left, right)
+    _draw_cover_meta(canv, cover, doc, left, right, regular_font)
 
 
-def _draw_cover_meta(canv, cover, doc, left, right):
+def _draw_cover_meta(canv, cover, doc, left, right, regular_font):
     """Draw author (left) and date (right) near the bottom of the cover."""
     meta_y = doc.bottomMargin + 20
     canv.setFillColor(HexColor(cover.get("subtitle_color", "#cccccc")))
-    canv.setFont("Helvetica", _COVER_META_SIZE)
+    canv.setFont(regular_font, _COVER_META_SIZE)
     if cover.get("author"):
         canv.drawString(left, meta_y, cover["author"])
     if cover.get("date"):

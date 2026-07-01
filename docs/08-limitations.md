@@ -119,8 +119,8 @@ Only TrueType (`.ttf`) font files are supported for custom font families. OpenTy
 ### All four variants required for full use
 Each custom font family ideally supplies four variants: `regular`, `bold`, `italic`, and `bold_italic`. You can omit variants — the font will register — but if you use bold or italic markup in text that references that font, ReportLab will fall back to a built-in font instead of the custom one.
 
-### Built-in fonts cannot be replaced
-The default styles (`h1`, `body`, etc.) use `Helvetica` and `Helvetica-Bold`. You can override these in the `styles` block to use a custom font, but the built-in Helvetica family always remains registered.
+### Default font is Vera, not a brand font
+The built-in defaults use the Bitstream Vera Sans family (bundled with ReportLab). Vera is an open-source, fully embedded TrueType font chosen for PDF/UA compliance — it is not a brand typeface. Override `styles.body.font` and `styles.h1.font` in your JSON with a registered custom font to match your brand.
 
 ### No font subsetting
 The entire TTF file is embedded in the PDF. For large CJK fonts this can increase file size significantly.
@@ -149,7 +149,10 @@ Interactive PDF form fields (text inputs, checkboxes, dropdowns) are not support
 pdfgen does not produce digitally signed PDFs.
 
 ### No PDF/A compliance
-The output is standard PDF 1.4. It is not certified PDF/A-1, PDF/A-2, or PDF/UA (accessibility).
+The output is standard PDF 1.4. It is not certified PDF/A-1 or PDF/A-2.
+
+### PDF/UA-1 is supported but requires embedded fonts
+pdfgen produces PDF/UA-1-conformant output when all fonts used in the document are embedded TrueType fonts. The built-in Vera defaults satisfy this. If you configure custom fonts, all variants (regular, bold, italic) must be TTF files. Using non-embedded fonts such as Helvetica, Symbol, or ZapfDingbats (including via special characters that fall back to those fonts) will fail PDF/UA clause 7.21.4.1. See [Accessibility — PDF/UA-1](09-accessibility-pdf-ua.md) for full details and testing instructions.
 
 ### No encryption or password protection
 Password-protected PDFs are not supported.

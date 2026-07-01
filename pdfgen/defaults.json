@@ -14,7 +14,7 @@
   "fonts": [],
   "styles": {
     "h1": {
-      "font":         "Helvetica-Bold",
+      "font":         "Vera-Bold",
       "size":         24,
       "color":        "#1a1a2e",
       "leading":      28,
@@ -43,7 +43,7 @@
       "right_indent": 0
     },
     "body": {
-      "font":         "Helvetica",
+      "font":         "Vera",
       "size":         11,
       "color":        "#333333",
       "leading":      16,
@@ -64,7 +64,7 @@
     },
     "table_header": {
       "extends":      "body",
-      "font":         "Helvetica-Bold",
+      "font":         "Vera-Bold",
       "color":        "#ffffff",
       "space_before": 0,
       "space_after":  0,
@@ -73,7 +73,7 @@
     },
     "toc_h1": {
       "extends":      "body",
-      "font":         "Helvetica-Bold",
+      "font":         "Vera-Bold",
       "space_before": 2,
       "space_after":  1,
       "left_indent":  0,
@@ -123,9 +123,9 @@
   "table_style": {
     "header_background": "#1a1a2e",
     "header_color":      "#ffffff",
-    "header_font":       "Helvetica-Bold",
+    "header_font":       "Vera-Bold",
     "header_align":      "left",
-    "body_font":         "Helvetica",
+    "body_font":         "Vera",
     "body_color":        "#333333",
     "font_size":         10,
     "cell_padding":      8,

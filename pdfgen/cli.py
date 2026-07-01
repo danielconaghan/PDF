@@ -4,7 +4,7 @@ from pathlib import Path
 
 import click
 
-from .fonts import register_fonts
+from .fonts import register_builtin_fonts, register_fonts
 from .merger import deep_merge, load_defaults
 from .renderer import render
 from .styles import resolve_styles
@@ -23,6 +23,7 @@ def main(input, output):
 
     config = deep_merge(load_defaults(), user_config)
     config["_resolved_styles"] = resolve_styles(config["styles"])
+    register_builtin_fonts()
     register_fonts(config.get("fonts", []), base_path=input.parent)
     render(config, str(output), base_path=str(input.parent))
 

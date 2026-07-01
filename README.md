@@ -95,8 +95,9 @@ This changes the h1 colour to Oxford Navy and leaves every other property — fo
 - **Headers and footers** — logo, text zones, separator line
 - **Automatic page numbers** — "Page X of Y", always accurate, cover excluded
 - **PDF metadata** — title, author, subject, keywords written to document properties
-- **Custom fonts** — register any TTF family with bold/italic variants
+- **Custom fonts** — register any TTF family with bold/italic variants; built-in Vera fallback ensures PDF/UA compliance even without custom fonts
 - **Style inheritance** — define a base style once, extend it everywhere
+- **PDF/UA-1 accessibility** — structure tree, tagged content, Artifact marking, XMP conformance declaration; validated against ISO 14289-1 via veraPDF
 
 ---
 
@@ -112,6 +113,7 @@ This changes the h1 colour to Oxford Navy and leaves every other property — fo
 | [Cover, Headers & Footers](docs/06-cover-headers-footers.md) | Cover page design, header/footer zones, page numbering |
 | [Defaults Reference](docs/07-defaults-reference.md) | Complete annotated defaults.json |
 | [Limitations](docs/08-limitations.md) | Known constraints and workarounds |
+| [Accessibility — PDF/UA-1](docs/09-accessibility-pdf-ua.md) | Compliance details, font requirements, `check_ua.py`, veraPDF via Docker |
 
 ---
 

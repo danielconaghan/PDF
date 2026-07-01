@@ -30,7 +30,7 @@
   "styles": {
     "h1": {
       "font": "Helvetica-Bold",
-      "size": 26,
+      "size": 22,
       "color": "#1a2e44",
       "leading": 32,
       "space_before": 0,

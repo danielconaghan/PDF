@@ -117,13 +117,22 @@ class TaggedTable(Table):
     def draw(self):
         old_cb = self._renderCB
         self._renderCB = self._tag_cb
+        self._table_artifact_open = False
+        begin_artifact(self.canv, "Layout")
+        self._table_artifact_open = True
         try:
             super().draw()
         finally:
+            if self._table_artifact_open:
+                end_artifact(self.canv)
+                self._table_artifact_open = False
             self._renderCB = old_cb
 
     def _tag_cb(self, table, event, *args):
         if event == "startCell":
+            if self._table_artifact_open:
+                end_artifact(self.canv)
+                self._table_artifact_open = False
             rowNo, colNo = args[0], args[1]
             role = "TH" if rowNo == 0 and self._has_header else "TD"
             mcid = next_mcid(self.canv)
@@ -135,6 +144,8 @@ class TaggedTable(Table):
             self.canv.addLiteral(f"/{role} <</MCID {mcid}>> BDC")
         elif event == "endCell":
             self.canv.addLiteral("EMC")
+            begin_artifact(self.canv, "Layout")
+            self._table_artifact_open = True
 
 
 # ── Phase 6C — element tracker and StructTreeRoot builder ────────────────────
@@ -241,7 +252,7 @@ def build_struct_tree(tracker, output_path):
                     sect.K.append(elem)
                     page_parents[page_idx][rec["mcid"]] = elem
 
-        # ── Build ParentTree and set StructParents on each page ─────────────
+        # ── Build ParentTree; set StructParents and tab order on each page ────
 
         parent_tree_entries = []
         for page_idx in range(n_pages):
@@ -256,12 +267,22 @@ def build_struct_tree(tracker, output_path):
             parent_tree_entries.append(pikepdf.Integer(page_idx))
             parent_tree_entries.append(parent_arr)
             pdf.pages[page_idx].StructParents = pikepdf.Integer(page_idx)
+            # PDF/UA-1 §7.1: tab order must follow the structure tree
+            pdf.pages[page_idx].Tabs = pikepdf.Name("/S")
 
         parent_tree = pdf.make_indirect(pikepdf.Dictionary(
             Nums=pikepdf.Array(parent_tree_entries),
         ))
         struct_root.ParentTree = parent_tree
         struct_root.ParentTreeNextKey = pikepdf.Integer(n_pages)
+
+        # ── XMP metadata: declare PDF/UA-1 conformance ───────────────────────
+
+        with pdf.open_metadata() as meta:
+            meta["pdfuaid:part"] = "1"
+            title = str(pdf.docinfo.get("/Title", "")).strip()
+            if title:
+                meta["dc:title"] = title
 
         # ── Wire into catalog and save ───────────────────────────────────────
 
@@ -333,12 +354,19 @@ def _build_table_struct(pikepdf, pdf, parent_elem, cells, page_parents, n_pages)
             page_idx = rec["page_idx"]
             if page_idx >= n_pages:
                 continue
-            cell_elem = pdf.make_indirect(pikepdf.Dictionary(
+            cell_dict = pikepdf.Dictionary(
                 Type=pikepdf.Name("/StructElem"),
                 S=pikepdf.Name(f'/{rec["role"]}'),
                 P=tr_elem,
                 Pg=pdf.pages[page_idx].obj,
                 K=pikepdf.Integer(rec["mcid"]),
-            ))
+            )
+            if rec["role"] == "TH":
+                # PDF/UA-1 §7.5: header cells must declare their scope
+                cell_dict.A = pikepdf.Dictionary(
+                    O=pikepdf.Name("/Table"),
+                    Scope=pikepdf.Name("/Col"),
+                )
+            cell_elem = pdf.make_indirect(cell_dict)
             tr_elem.K.append(cell_elem)
             page_parents[page_idx][rec["mcid"]] = cell_elem

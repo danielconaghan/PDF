@@ -77,12 +77,12 @@
         "grid_color":        "#bbbbbb"
       },
       "rows": [
-        ["Value-at-Risk (99%, 1d)", "1.82%",  "—",     "✓ Within limit"],
-        ["Conditional VaR",        "2.41%",  "—",     "✓ Within limit"],
-        ["Max Drawdown (YTD)",     "−3.1%",  "−4.8%", "✓ Better"],
-        ["Tracking Error (ann.)",  "2.8%",   "—",     "✓ Within limit"],
-        ["Beta",                   "0.94",   "1.00",  "✓ As expected"],
-        ["Active Share",           "38.2%",  "—",     "✓ Acceptable"]
+        ["Value-at-Risk (99%, 1d)", "1.82%",  "—",     "Pass Within limit"],
+        ["Conditional VaR",        "2.41%",  "—",     "Pass Within limit"],
+        ["Max Drawdown (YTD)",     "−3.1%",  "−4.8%", "Pass Better"],
+        ["Tracking Error (ann.)",  "2.8%",   "—",     "Pass Within limit"],
+        ["Beta",                   "0.94",   "1.00",  "Pass As expected"],
+        ["Active Share",           "38.2%",  "—",     "Pass Acceptable"]
       ]
     },
 
